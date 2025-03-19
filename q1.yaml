@@ -1,0 +1,9 @@
+question: |
+  Analyze the following bank support conversation and answer:
+  How polite was the agent throughout the conversation?
+
+examples: |
+  - Example 1: The agent was consistently polite, using phrases like "please" and "thank you".
+  - Example 2: The agent showed impatience towards the end, which affected politeness.
+
+transcript_placeholder: "{{ transcript }}"
