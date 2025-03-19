@@ -1,9 +1,54 @@
 question: |
-  Analyze the following bank support conversation and answer:
-  How polite was the agent throughout the conversation?
+  Analyze the conversation and answer the following:
+  Did the agent demonstrate good listening skills and show empathy towards the customer?
 
 examples: |
-  - Example 1: The agent was consistently polite, using phrases like "please" and "thank you".
-  - Example 2: The agent showed impatience towards the end, which affected politeness.
+  - Example 1: The agent acknowledged the customer's concerns and responded with empathy, saying things like "I understand how frustrating this must be."
+  - Example 2: The agent interrupted the customer multiple times and did not acknowledge the customer's emotional state.
 
 transcript_placeholder: "{{ transcript }}"
+
+
+question: |
+  Analyze the conversation and answer the following:
+  Did the agent ask the necessary questions to properly identify the customer's problem?
+
+examples: |
+  - Example 1: The agent asked clarifying questions like "Can you tell me exactly when this issue started?" to understand the issue.
+  - Example 2: The agent did not probe further and made assumptions about the problem without confirming with the customer.
+
+transcript_placeholder: "{{ transcript }}"
+
+
+question: |
+  Analyze the conversation and answer the following:
+  Did the agent correctly direct the customer to the appropriate channel, line, or team if required?
+
+examples: |
+  - Example 1: The agent informed the customer, "For this issue, I'll connect you to our card services team," ensuring proper redirection.
+  - Example 2: The agent kept handling the issue despite it needing a specialist team's attention and did not transfer or guide the customer.
+
+transcript_placeholder: "{{ transcript }}"
+
+
+question: |
+  Analyze the conversation and answer the following:
+  Did the agent summarize the action taken at the end of the interaction?
+
+examples: |
+  - Example 1: The agent summarized by saying, "I've reset your online banking access. You should receive a new link within 5 minutes."
+  - Example 2: The agent ended the call without summarizing the steps completed, leaving the customer unsure.
+
+transcript_placeholder: "{{ transcript }}"
+
+
+question: |
+  Analyze the conversation and answer the following:
+  Did the agent demonstrate readiness, use the opening script, introduce themselves with their first and last name, welcome the customer enthusiastically, and ask for the customer's name and greet them with it?
+
+examples: |
+  - Example 1: The agent started with, "Good morning, this is John Smith from XYZ Bank. Welcome! May I know your name, please?" and greeted the customer by name.
+  - Example 2: The agent skipped the introduction and did not ask for the customer's name or greet them properly.
+
+transcript_placeholder: "{{ transcript }}"
+
