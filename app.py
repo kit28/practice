@@ -65,3 +65,6 @@ def analyze_transcript():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+#curl -X POST http://localhost:5000/analyze -F "file=@transcript.txt" --output agent_analysis.xlsx
+
