@@ -1,0 +1,5 @@
+Flask
+openai
+pyyaml
+pandas
+openpyxl
