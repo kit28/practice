@@ -1,0 +1,10 @@
+question: |
+  Did the agent correctly direct the customer to the appropriate channel, line, or team if required?
+
+examples: |
+  - Example 1: The agent informed the customer, "For this issue, I'll connect you to our card services team," ensuring proper redirection.
+  - Example 2: The agent kept handling the issue despite it needing a specialist team's attention and did not transfer or guide the customer.
+
+transcript_placeholder: "{{ transcript }}"
+
+weightage: 5

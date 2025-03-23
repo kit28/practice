@@ -1,0 +1,22 @@
+(Customer agent)**: Thank you for calling, sir.
+(Customer)**: You're welcome.
+(Customer agent)**: Hello?
+(Customer)**: Hello, sir. Sir, I need your help. My credit card is blocked and I need to get it.
+(Customer)**: Do you want my ID number or your ID number?
+(Customer)**: Do you want my ID number?
+(Customer agent)**: I need number.
+(Customer)**: Okay.**** *****.
+(Customer agent)**: Okay, so let's see. The card has been blocked from date 23rd of December and the fraud department, they try to contact you. To confirm the transaction from their sales and service.
+(Customer)**: Yeah, actually I was trying to do it to do one purchase. I think after that I didn't see the call.
+(Customer agent)**: Yeah, they blocked it for security because they suspicious as I brought. So that's why they blocked it for security. This one will make no request for it to be reactivated. Okay, sir, can you confirm your order? It will take the process one hour maximum.
+(Customer)**: Okay, inshallah.
+(Customer agent)**: But can you confirm your mobile number?
+(Customer)**: *****-*****-*****.
+(Customer agent)**: Okay, hold on. Now I'll make another request. This is the address of the target. Okay. Thank you for waiting, sir. Sorry for that delay.
+(Customer agent)**: Sir, now we submit the request. In a few seconds you will receive SMS message for request number and the process will take one hour maximum. You will receive via call or another SMS message. The request has been completed for activation.
+(Customer)**: Many, many texts, many, many texts. Actually I'll give you some of them on the bar. No. Okay, thank you.
+(Customer agent)**: Anything else, sir? Thank you, sir.
+(Customer)**: Thank you, sir.
+(Customer agent)**: Thank you for calling, sir.
+(Customer)**: Thank you for one hour.
+(Customer agent)**: Thank you.

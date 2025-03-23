@@ -1,0 +1,10 @@
+question: |
+  Did the agent ask the necessary questions to properly identify the customer's problem?
+
+examples: |
+  - Example 1: The agent asked clarifying questions like "Can you tell me exactly when this issue started?" to understand the issue.
+  - Example 2: The agent did not probe further and made assumptions about the problem without confirming with the customer.
+
+transcript_placeholder: "{{ transcript }}"
+
+weightage: 20
