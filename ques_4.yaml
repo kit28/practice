@@ -1,8 +1,8 @@
 question: |
     Did the agent ask the customer for any other services ? And follow the closing script.
 examples: |
-  - Example 1: The agent started with, "Good morning, this is John Smith from XYZ Bank. Welcome! May I know your name, please?" and greeted the customer by name.
-  - Example 2: The agent skipped the introduction and did not ask for the customer's name or greet them properly.
+  - Example 1: Before ending, the agent asked, "Is there anything else I can assist you with today?" and closed with, "Thank you for calling XYZ Bank. Have a great day!"
+  - Example 2: The agent ended the call abruptly without offering additional help or following the closing script.
 
 transcript_placeholder: "{{ transcript }}"
 
