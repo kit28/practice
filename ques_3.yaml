@@ -1,0 +1,10 @@
+question: |
+    Did the agent user the script before putting the customer on hold/when get back to the customer. Did the agent get back to the customer within 2 mins of the hold or assured the customer while on hold with 'I am still serving you please hold on'
+
+examples: |
+  - Example 1: The agent started with, "Good morning, this is John Smith from XYZ Bank. Welcome! May I know your name, please?" and greeted the customer by name.
+  - Example 2: The agent skipped the introduction and did not ask for the customer's name or greet them properly.
+
+transcript_placeholder: "{{ transcript }}"
+
+weightage: 5

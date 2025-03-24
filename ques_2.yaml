@@ -1,0 +1,10 @@
+question: |
+    Did the agent use the SQ (security Question) script and the diversity in asking them?
+
+examples: |
+  - Example 1: The agent started with, "Good morning, this is John Smith from XYZ Bank. Welcome! May I know your name, please?" and greeted the customer by name.
+  - Example 2: The agent skipped the introduction and did not ask for the customer's name or greet them properly.
+
+transcript_placeholder: "{{ transcript }}"
+
+weightage: 5
