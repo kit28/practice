@@ -1,8 +1,9 @@
 question: |
-    Did the agent summarize the action which has been taken?    
+    Did the agent summarize the action which has been taken?
+  
 examples: |
-  - Example 1: The agent started with, "Good morning, this is John Smith from XYZ Bank. Welcome! May I know your name, please?" and greeted the customer by name.
-  - Example 2: The agent skipped the introduction and did not ask for the customer's name or greet them properly.
+  - Example 1: The agent clearly summarized, "I have updated your address and reissued your debit card. You'll receive it in 5-7 business days."
+  - Example 2: The agent completed the action but did not summarize what was done, leaving the customer unsure.
 
 transcript_placeholder: "{{ transcript }}"
 
