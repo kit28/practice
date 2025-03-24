@@ -26,3 +26,8 @@ print(analyze_transcript())
 
 # if __name__ == '__main__':
 #     app.run(debug=True)
+
+curl -X POST "http://localhost:8000/analyze/" \
+  -H "accept: application/json" \
+  -H "Content-Type: multipart/form-data" \
+  -F "file=@transcript.txt"
