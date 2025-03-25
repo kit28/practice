@@ -1,0 +1,23 @@
+**Diarized Conversation:**  
+**Customer:** Peace be upon you. I’m facing an issue with making a payment using my card.  
+**Customer:** At the Mune complex. I want to eat, but I’m unsure if I need to ask for the bill. I’ve looked everywhere for it but can’t find it, I swear.  
+**Agent:** Naeem Ali Charman Al-Oam. Welcome to Naeem’s hospitality. What type of card is it? An ATM card or a secondary card?  
+**Customer:** ATM card, yes.  
+**Agent:** Both cards in your account, Mr. Naeem, are active.  
+**Customer:** The card ending with 060 needs to be changed. Is that the one in question?  
+**Agent:** Yes. Have you reported this issue?  
+**Customer:** Yes, I have. But the payment still won’t go through.  
+**Agent:** Lock the card and review it, okay?  
+**Customer:** Place that name. Uh-huh.  
+**Agent:** On the first app. Correct. Currently, I’m not on the app. Apologies—I’m not on the app. The automated response from the system says it’s inactive.  
+**Customer:** [masked]—it hasn’t stopped yet. Log into the first app and deactivate it. Deactivation confirmed.  
+**Agent:** I’m not sure how to navigate the app. I logged into my account but don’t know which section to go to. Just select the card, and the add option appears.  
+**Customer:** Are you unable to transfer? Currently, the system hasn’t processed the request. You can report it via the app. Okay, what’s left?  
+**Agent:** Report a lost or stolen card. Yes. After deactivating the card at the self-service machine, you’ll receive a message.  
+**Customer:** The message says, “Card number [masked] has been deactivated.”  
+**Agent:** Thank you.  
+**Customer:** No, Mr. Professor, the card is still active. I’ll contact the professor.  
+**Agent:** Yes, until [masked]. The system won’t charge you.  
+**Customer:** Just log into the first app, select the card, and deactivate it. On the app, tap the red icon for your account.  
+**Agent:** The main screen shows all your cards. Select the card, choose “Deactivate,” and confirm.  
+**Customer:** Thank you very much. Thank you.  
