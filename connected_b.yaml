@@ -1,0 +1,9 @@
+question: |
+    Was the agent voice clear during the call?
+examples: |
+  - Example 1: The agent spoke clearly, at an audible volume, and avoided mumbling or speaking too fast.
+  - Example 2: The agent’s voice was unclear, too soft, or too fast, making it difficult for the customer to understand.
+
+transcript_placeholder: "{{ transcript }}"
+
+weightage: 5

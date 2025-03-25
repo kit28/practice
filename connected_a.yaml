@@ -1,0 +1,9 @@
+question: |
+    Was the call duration high unnecessarily?  
+examples: |
+  - Example 1: The agent stayed focused, quickly resolved the issue, and avoided unnecessary small talk or long silences.
+  - Example 2: The agent took long pauses, repeated information multiple times, or engaged in unrelated conversation, extending the call duration unnecessarily.
+
+transcript_placeholder: "{{ transcript }}"
+
+weightage: 10

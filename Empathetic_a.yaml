@@ -1,0 +1,9 @@
+question: |
+    Did the agent manage the call effectively and showed respect to the customer? 
+examples: |
+  - Example 1: The agent stayed polite, addressed the customer respectfully, and managed the flow of the conversation without unnecessary delays or confusion.
+  - Example 2: The agent interrupted the customer, used informal or rude language, or allowed the conversation to become disorganized.
+
+transcript_placeholder: "{{ transcript }}"
+
+weightage: 5

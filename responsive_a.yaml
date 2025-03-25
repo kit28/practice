@@ -1,0 +1,9 @@
+question: |
+  Did the agent demonstrate readiness, use the opening script, introduce themselves with their first and last name, welcome the customer enthusiastically, and ask for the customer's name and greet them with it?
+
+examples: |
+  - Example 1: Did the agent started with - "Thankyou for calling SAB(bank) phone, this is(first and second name) and I am deligthed to serve you."
+
+transcript_placeholder: "{{ transcript }}"
+
+weightage: 5

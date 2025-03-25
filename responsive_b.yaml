@@ -1,0 +1,10 @@
+question: |
+    Did the agent use the SQ (security Question) script and the diversity in asking them?
+
+examples: |
+  - Example 1: Did he took customer's accound id ?
+  - Example 2: Did he confirm by asking last 4 digits of credit card number?
+
+transcript_placeholder: "{{ transcript }}"
+
+weightage: 5

@@ -1,0 +1,10 @@
+question: |
+  Did the agent summarize the action taken at the end of the interaction?
+
+examples: |
+  - Example 1: The agent summarized by saying, "I've reset your online banking access. You should receive a new link within 5 minutes."
+  - Example 2: The agent ended the call without summarizing the steps completed, leaving the customer unsure.
+
+transcript_placeholder: "{{ transcript }}"
+
+weightage: 5

@@ -1,0 +1,10 @@
+question: |
+    Did the agent user the script before putting the customer on hold/when get back to the customer. Did the agent get back to the customer within 2 mins of the hold or assured the customer while on hold with 'I am still serving you please hold on'
+
+examples: |
+  - Example 1: The agent said, "May I place you on hold for a moment while I check this for you?" and returned within 2 minutes or reassured with, "I am still serving you, please stay on the line."
+  - Example 2: The agent placed the customer on hold without informing them and did not provide any reassurance while they were on hold.
+
+transcript_placeholder: "{{ transcript }}"
+
+weightage: 5

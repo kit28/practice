@@ -1,0 +1,9 @@
+question: |
+    Did the agent ask the customer for any other services ? And follow the closing script.
+examples: |
+  - Example 1: Before ending, the agent asked, "Is there anything else I can assist you with today?" and closed with, "Thank you for calling XYZ Bank. Have a great day!"
+  - Example 2: The agent ended the call abruptly without offering additional help or following the closing script.
+
+transcript_placeholder: "{{ transcript }}"
+
+weightage: 5
