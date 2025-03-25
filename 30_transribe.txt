@@ -1,0 +1,20 @@
+ 
+**Customer:** Hello, how are you?
+**Agent:** Thank you, this is Al Rajhi Bank, my name is Hajar. How can I help you?
+**Customer:** Yes, peace be upon you, and upon you. Please proceed. I'm trying to access the website, but it's not working for me. It keeps asking me to update my data. I enter, and it doesn't work.
+**Agent:** How did you update your data? From where?
+**Customer:** From the beginning, online. Using my ID.
+**Customer:** Zero, one, two, three, four, five, five, five, six, seven, eight.
+**Agent:** Thank you.
+**Agent:** This data update, is it the "Know Your Customer" process?
+**Customer:** I only update through Al Rajhi's website, not the app. I've tried through the website too.
+**Agent:** What exactly do you see? Is there a note displayed?
+**Agent:** Sir, hello. Sir, excuse me, could you please provide the reference number? I'm busy today. But my son can update it.
+**Customer:** It keeps showing errors, but I can’t serve the customer. It just shows an error, without any...
+**Customer:** No note or code. Nothing at all. I've tried from the app.
+**Customer:** I've been experiencing this for about two weeks.
+**Agent:** Okay, Madam, I will raise a complaint for you. Just give me a moment. Yes.
+**Customer:** Thank you.
+**Agent:** Thank you.
+**Agent:** Thank you.
+**Agent:** Thank you.
