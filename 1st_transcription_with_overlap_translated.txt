@@ -1,0 +1,9 @@
+Agent: Good morning! How can I assist you today?  
+Customer: Thank you. This is Hajar. I’m trying to update my account details but keep encountering errors.  
+Agent: I’m sorry for the inconvenience. Let me clarify—have you tried accessing the SAB Bank website?  
+Customer: Yes, I’ve tried multiple times. Every time I log in, it redirects me to a data update page, but the process never completes.  
+Agent: Understood. To update your information, you must use the online portal at sabbank.com, not the app. Have you attempted this?  
+Customer: I’ve tried both the website and the app. Neither works. When I enter my ID number—[Masked]—it just shows an error without any message or code.  
+Agent: Let me confirm: you’re entering your national ID correctly?  
+Customer: Yes, exactly as instructed. But after weeks of trying, I still can’t resolve it. Could you escalate this?  
+Agent: Of course. I’ll file a formal complaint and notify you within two weeks. Thank you for your patience.  

@@ -1,0 +1,22 @@
+
+Agent: Good morning. How can I assist you today?  
+Customer: Hello. I have an expired ATM card that I can’t find in the city. I want to confirm if it’s been deactivated or not. I’ve searched for it but couldn’t locate it. Could you help me, sir?  
+Agent: May I have your ID number and full name?  
+Customer: My ID number is [Masked]. My name is Naeem Ali Charmoon Al-Oam.  
+Agent: Thank you, Mr. Naeem. What type of card are you referring to? An ATM card or a credit card?  
+Customer: An ATM card.  
+Agent: The two cards linked to your account are currently active. The card ending with [Masked] is still functional.  
+Customer: [Masked]? That’s the one I’m asking about. Is there a way to deactivate it?  
+Agent: Yes, you can deactivate it via the SAB Bank app. Have you tried using the app?  
+Customer: I tried, but the card isn’t listed in the app.  
+Agent: Let me guide you. Log in to the SAB Bank mobile app, navigate to your account, and select the card you want to deactivate. The option will appear.  
+Customer: I’m not sure how to proceed.  
+Agent: Don’t worry. After deactivating the card through the app, you can visit a branch to request a replacement. Currently, the system allows deactivation via the app.  
+Customer: What if I lost the card entirely? Should I go to the branch directly?  
+Agent: Yes. First, try deactivating it using a self-service machine at the branch. Once done, you’ll receive an SMS with confirmation code [Masked].  
+Customer: Understood. Thank you.  
+Agent: Wait a moment. The card is still active. Let me confirm its status. The expiration code is [Masked].  
+Customer: Thank you for clarifying.  
+Agent: You’re welcome. If you need further assistance, call our free hotline at 800-824-488.  
+Customer: Thank you so much.  
+Agent: My pleasure. Have a good day.  
