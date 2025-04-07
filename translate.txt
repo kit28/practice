@@ -37,3 +37,15 @@ Agent: Okay, I’ll raise a dispute request for you.
 Customer: Thank you so much.
 Agent: You're welcome!
 
+
+00:00:001:00 -- 00:00:003:10 Hi, I need help with a transaction.
+00:00:003:11 -- 00:00:005:00 Sure, I'd be happy to help. What seems to be the issue?
+00:00:005:01 -- 00:00:006:20 There's a charge I don't recognize on my statement.
+00:00:006:21 -- 00:00:008:00 I can check that for you. Could you verify your name and card number?
+
+Customer: 00:00:001:00 -- 00:00:003:10 Hi, I need help with a transaction.
+Agent: 00:00:003:11 -- 00:00:005:00 Sure, I'd be happy to help. What seems to be the issue?
+Customer: 00:00:005:01 -- 00:00:006:20 There's a charge I don't recognize on my statement.
+Agent: 00:00:006:21 -- 00:00:008:00 I can check that for you. Could you verify your name and card number?
+
+
