@@ -1,0 +1,39 @@
+You are given a conversation in Arabic with precise timestamps in the format HH:MM:SSS:MsMs at the beginning of each sentence. Your task is to translate each sentence into English while preserving the exact timestamp for each line. Do not remove, modify, or reorder the timestamps. Only translate the Arabic content to English.
+
+00:00:001:00 مرحباً، كيف يمكنني مساعدتك اليوم؟
+00:00:003:12 لدي مشكلة في حسابي البنكي.
+00:00:005:45 ما نوع المشكلة؟
+00:00:007:20 تم سحب مبلغ غير معروف من رصيدي.
+
+
+00:00:001:00 Hello, how can I help you today?
+00:00:003:12 I have an issue with my bank account.
+00:00:005:45 What kind of issue?
+00:00:007:20 An unknown amount was withdrawn from my balance.
+
+
+You are given a transcript of a conversation between a bank agent and a customer. Identify and label each speaker turn clearly as either Customer: or Agent:. Keep the original order of speech and do not change the content. Your task is only to assign the correct speaker label to each line.
+
+Hi, I need some help with my credit card.
+Sure, I'd be happy to assist you. Can you tell me what's the issue?
+I noticed an unknown charge on my bill this month.
+Let me pull up your account details. Could you verify your full name and last four digits of the card?
+It's John Matthews, card ending in 4572.
+Thanks. I see the charge — it looks like it’s from a merchant called TravelGo. Do you recognize it?
+No, I’ve never used that service.
+Okay, I’ll raise a dispute request for you.
+Thank you so much.
+You're welcome!
+
+
+Customer: Hi, I need some help with my credit card.
+Agent: Sure, I'd be happy to assist you. Can you tell me what's the issue?
+Customer: I noticed an unknown charge on my bill this month.
+Agent: Let me pull up your account details. Could you verify your full name and last four digits of the card?
+Customer: It's John Matthews, card ending in 4572.
+Agent: Thanks. I see the charge — it looks like it’s from a merchant called TravelGo. Do you recognize it?
+Customer: No, I’ve never used that service.
+Agent: Okay, I’ll raise a dispute request for you.
+Customer: Thank you so much.
+Agent: You're welcome!
+
