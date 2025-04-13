@@ -1,5 +1,5 @@
-from datetime import timedelta
 import re
+from datetime import timedelta
 
 def seconds_to_hhmmssms(seconds):
     td = timedelta(seconds=float(seconds))
@@ -10,20 +10,24 @@ def seconds_to_hhmmssms(seconds):
     return f"{hours:02}:{minutes:02}:{secs:02}:{milliseconds:03}"
 
 def convert_timestamps(input_file, output_file):
-    with open(input_file, 'r') as f:
-        content = f.read()
+    with open(input_file, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
 
-    def replace_match(match):
-        start = seconds_to_hhmmssms(match.group(1))
-        end = seconds_to_hhmmssms(match.group(2))
-        return f"START: {start} | END {end}"
+    converted_lines = []
+    timestamp_pattern = re.compile(r"START:\s*([\d.]+)\s*\|\s*END\s*([\d.]+)")
 
-    # Regex pattern to match lines like START: 6.0 | END 9.0
-    pattern = r"START:\s*([\d.]+)\s*\|\s*END\s*([\d.]+)"
-    updated_content = re.sub(pattern, replace_match, content)
+    for line in lines:
+        match = timestamp_pattern.match(line.strip())
+        if match:
+            start = seconds_to_hhmmssms(match.group(1))
+            end = seconds_to_hhmmssms(match.group(2))
+            new_line = f"START: {start} | END {end}\n"
+            converted_lines.append(new_line)
+        else:
+            converted_lines.append(line)
 
-    with open(output_file, 'w') as f:
-        f.write(updated_content)
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.writelines(converted_lines)
 
-# Example usage:
-convert_timestamps("input.txt", "output.txt")
+# Example usage
+convert_timestamps('input.txt', 'output.txt')
