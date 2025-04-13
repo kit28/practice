@@ -17,11 +17,12 @@ def convert_timestamps(input_file, output_file):
     timestamp_pattern = re.compile(r"START:\s*([\d.]+)\s*\|\s*END\s*([\d.]+)")
 
     for line in lines:
-        match = timestamp_pattern.match(line.strip())
+        match = timestamp_pattern.search(line)
         if match:
             start = seconds_to_hhmmssms(match.group(1))
             end = seconds_to_hhmmssms(match.group(2))
-            new_line = f"START: {start} | END {end}\n"
+            # replace only the matched part in the line
+            new_line = timestamp_pattern.sub(f"START: {start} | END {end}", line)
             converted_lines.append(new_line)
         else:
             converted_lines.append(line)
@@ -29,5 +30,5 @@ def convert_timestamps(input_file, output_file):
     with open(output_file, 'w', encoding='utf-8') as f:
         f.writelines(converted_lines)
 
-# Example usage
-convert_timestamps('input.txt', 'output.txt')
+# Example usage:
+convert_timestamps("input.txt", "output.txt")
