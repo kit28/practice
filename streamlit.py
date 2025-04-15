@@ -92,3 +92,45 @@ if uploaded_file:
 
         except Exception as e:
             st.error(f"Failed to process the file: {str(e)}")
+            
+    
+
+
+
+# Streamlit UI
+st.title("Audio Analytics Report Generator")
+
+uploaded_file = st.file_uploader("Upload a WAV audio file", type=["wav"])
+
+if uploaded_file:
+    if "csv_ready" not in st.session_state:
+        st.session_state.csv_ready = False
+        st.session_state.csv_data = None
+        st.session_state.csv_filename = None
+
+    if not st.session_state.csv_ready:
+        with st.spinner("Processing audio..."):
+            try:
+                with tempfile.TemporaryDirectory() as tmpdir:
+                    audio_path = os.path.join(tmpdir, uploaded_file.name)
+                    with open(audio_path, "wb") as f:
+                        f.write(uploaded_file.read())
+
+                    analytics_csv_path = process_audio_file(audio_path, tmpdir)
+
+                    with open(analytics_csv_path, "rb") as f:
+                        st.session_state.csv_data = f.read()
+                        st.session_state.csv_filename = os.path.basename(analytics_csv_path)
+                        st.session_state.csv_ready = True
+                        st.success("Report generated successfully!")
+
+            except Exception as e:
+                st.error(f"Failed to process the file: {str(e)}")
+
+    if st.session_state.csv_ready and st.session_state.csv_data:
+        st.download_button(
+            label="Download Analytics CSV",
+            data=st.session_state.csv_data,
+            file_name=st.session_state.csv_filename,
+            mime="text/csv"
+        )
