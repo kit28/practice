@@ -41,3 +41,7 @@ Combining AWQ and INT4 results in:
 	•	Text generation, summarization, and rewriting.
 	•	Knowledge search, document retrieval.
 	•	Running on GPUs with limited VRAM (like 8GB–16GB) or on edge devices.
+
+Meta Llama 3.1 8B Instruct AWQ INT4 is a lightweight, instruction-tuned language model with 8 billion parameters, optimized for following user prompts. It uses AWQ (Activation-aware Weight Quantization) and INT4 (4-bit precision) to reduce model size (~4.5 GB) and speed up inference by up to 4x, with minimal quality loss. The model is ideal for low-latency, memory-efficient deployments on GPUs and edge devices, making it highly suited for production environments.
+
+
