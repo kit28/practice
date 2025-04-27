@@ -1,0 +1,43 @@
+Documentation: Meta Llama 3.1 8B Instruct AWQ INT4
+
+1. Model Overview
+
+The Meta Llama 3.1 8B Instruct AWQ INT4 is a compressed, production-optimized version of Meta’s Llama 3.1 model series.
+It contains 8 billion parameters and is instruction-tuned, meaning it is fine-tuned specifically to follow user instructions accurately across a wide range of tasks (chatting, answering, summarizing, coding, etc.).
+
+This version uses AWQ (Activation-aware Weight Quantization) and INT4 (4-bit integer precision) to make the model lighter and faster without significant loss of quality.
+
+Model Size:
+	•	Original FP16 (full precision) size: ~16 GB
+	•	After INT4 quantization: ~4.5 GB
+
+Parameter Count:
+	•	8 billion parameters
+
+⸻
+
+2. What is AWQ INT4?
+	•	AWQ (Activation-aware Weight Quantization) is an advanced compression technique that intelligently rescales important weight channels based on activation sensitivity.
+It preserves critical weights’ precision while heavily compressing less critical parts, minimizing the typical quality drop seen in basic quantization.
+	•	INT4 (4-bit integers) means model weights are stored using only 4 bits per value, drastically reducing model size and computation overhead compared to standard 16-bit (FP16) or 32-bit (FP32) formats.
+
+Combining AWQ and INT4 results in:
+	•	Up to 75%-80% smaller memory footprint.
+	•	2x-4x faster inference speeds.
+	•	Minimal loss in model accuracy.
+
+⸻
+
+3. Key Benefits
+	•	Reduced Latency: Faster output generation.
+	•	Lower Memory Usage: Smaller deployment size, higher batch processing possible.
+	•	Cost Efficiency: Lower GPU memory and computation cost.
+	•	Production-Ready: Stable, reliable outputs even after quantization.
+
+⸻
+
+4. Recommended Use Cases
+	•	Customer service chatbots and virtual assistants.
+	•	Text generation, summarization, and rewriting.
+	•	Knowledge search, document retrieval.
+	•	Running on GPUs with limited VRAM (like 8GB–16GB) or on edge devices.
