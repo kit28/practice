@@ -1,1 +1,14 @@
 ########################
+prompt = """
+You are an assistant that extracts structured information from customer service conversations.
+
+Given the following transcript, extract the following fields:
+- problem_category (e.g., inquiry, complaint, feedback)
+- product_feature (e.g., Reward points, Interest rate, Billing)
+- summary (brief description)
+
+Respond in **pure JSON** only.
+
+Transcript:
+"The customer is inquiring about missing reward miles (welcome and spending miles) on their credit card after submitting a support request. They are frustrated with the delay. The agent has submitted a complaint for processing and assured them."
+"""
