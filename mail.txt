@@ -1,0 +1,16 @@
+Hi Hussain,
+
+We are currently proceeding with the following logic for security question evaluation:
+	1.	For general inquiries, no security questions are required.
+	2.	If the query pertains to maintenance or involves any confidential user data, the agent must collect the user’s ID number.
+	3.	If the ID number is not available, the agent should request the account number instead.
+	4.	For queries related to customer account details or credit cards, the agent must ask for the ID number or account number, along with one additional security question from the list below:
+	•	Q1…
+	•	Q2…
+	•	Q3…
+	•	Q4…
+
+Please let me know if this approach looks good to you. We can also set up a separate discussion if you feel there’s anything we may have missed.
+
+Regards,
+[Your Name]
