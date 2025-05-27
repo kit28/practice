@@ -8,3 +8,16 @@ Gemma-3-27B-IT is Google’s latest open-source, instruction-tuned multimodal la
 FFmpeg is a powerful open-source command-line tool for processing multimedia files. It supports recording, converting, streaming, and editing audio and video in a wide range of formats, making it a core utility in media workflows and development.
 
 FFprobe is a command-line tool that comes with FFmpeg, used to analyze multimedia files. It extracts and displays detailed information such as codecs, bitrates, frame rates, and metadata—essential for inspecting and debugging audio/video content.
+
+Model/Tool
+Use Case
+Multilingual-E5-large-instruct
+Multilingual semantic search and text similarity in customer support chats.
+Whisper Large V3
+Transcribing and translating multilingual customer call recordings.
+Gemma-3-27B-IT
+Generating detailed responses or summaries from text and images in RAG systems.
+FFmpeg
+Converting customer call audio files to a standard format for processing.
+FFprobe
+Extracting audio metadata (duration, codec, sample rate) for quality checks.
