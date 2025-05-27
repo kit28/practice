@@ -1,0 +1,10 @@
+Multilingual-E5-large-instruct is a transformer-based sentence embedding model that supports over 100 languages. Fine-tuned with instruction-style prompts, it excels in multilingual semantic search, dense retrieval, and text similarity tasks.
+
+
+Whisper Large V3 is OpenAI’s advanced speech recognition and translation model, offering enhanced accuracy across diverse languages and audio conditions. Trained on over 5 million hours of audio, it introduces improvements like increased spectrogram resolution and expanded language support, including a new token for Cantonese. Compared to its predecessor, Whisper Large V2, it achieves a 10–20% reduction in transcription errors.
+
+Gemma-3-27B-IT is Google’s latest open-source, instruction-tuned multimodal language model. With 27 billion parameters, it supports both text and image inputs, offering advanced reasoning, summarization, and multilingual capabilities across over 140 languages. Featuring a 128K-token context window and function-calling support, it’s optimized for high-performance applications on single GPUs or TPUs.
+
+FFmpeg is a powerful open-source command-line tool for processing multimedia files. It supports recording, converting, streaming, and editing audio and video in a wide range of formats, making it a core utility in media workflows and development.
+
+FFprobe is a command-line tool that comes with FFmpeg, used to analyze multimedia files. It extracts and displays detailed information such as codecs, bitrates, frame rates, and metadata—essential for inspecting and debugging audio/video content.
