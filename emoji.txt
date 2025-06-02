@@ -1,0 +1,18 @@
+Emoji
+Use Case
+Description
+ðŸ¦
+Banking
+Represents financial institutions or customer service in a bank
+ðŸ¤–
+AI
+Universal symbol for AI-powered automation
+ðŸŽ§
+Call Center
+Suggests audio/call support or agents wearing headsets
+ðŸ“ž
+Phone Call
+Reflects the nature of the audio input
+ðŸ§¾
+Transcripts / Summaries
+Matches output like transcript or summary
