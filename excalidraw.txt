@@ -1,1 +1,42 @@
 https://excalidraw.com/#json=NP1P7rTm4dAGyguFXDV64,KDs3OcobsY7nampjiLQQZg
+
+
+1. Problem Statement
+
+SAB Bank’s QA team manually reviews customer-agent calls to rate agent performance on:
+	•	Responsiveness
+	•	Empathy
+	•	Accountability
+	•	Connectedness
+
+Challenges:
+	•	Time-consuming
+	•	Inconsistent & subjective
+	•	Not scalable
+
+⸻
+
+2. Solution Overview
+
+An AI-driven pipeline to automate and standardize agent evaluation.
+
+Workflow:
+	1.	Audio Input (WAV, Arabic/English)
+	2.	STT Transcription
+	3.	Speaker Diarization (Agent vs. Customer)
+	4.	LLM-Based Analysis on soft skills
+	5.	Report Generation with scores & reasoning
+
+Modular, scalable, and integrates easily into QA workflow.
+
+⸻
+
+3. Outcome / Benefits
+
+✅ Automated Workflow - Saves time & effort
+
+✅ Bias-Free Evaluation - Consistent and fair scoring
+
+✅ Insightful Reports - Reasoning aids training
+
+✅ Scalable Solution - Handles high call volume across languages
