@@ -1,0 +1,32 @@
+Slide Title: Call Center Analytics – Automating Agent Performance Evaluation
+________________________________________
+1. Problem Statement
+At SAB Bank, customers contact the support center via phone for help with queries or issues. A small internal QA team manually reviews recorded customer-agent conversations to assess agent performance based on key soft-skill metrics:
+•	Responsiveness
+
+•	Empathy
+
+•	Accountability
+
+•	Connectedness
+However, this process is: - Time-consuming and labor-intensive - Inconsistent due to subjective human interpretation - Limited in scale and scope
+________________________________________
+2. Solution Overview
+To overcome the limitations of manual evaluation, we have developed an AI-powered pipeline that automates the entire process, ensuring faster, unbiased, and consistent analysis.
+How It Works:
+1.	Input Audio: System accepts call recordings in WAV format (supports both Arabic and English).
+2.	Speech-to-Text Transcription: A state-of-the-art speech-to-text model transcribes the audio into text.
+3.	Speaker Diarization: Diarization segments the transcript and labels speakers (agent vs. customer) accurately.
+4.	LLM-Based Evaluation: A large language model (LLM) analyses the agent’s part of the conversation using predefined soft-skill metrics, generating both scores and reasoning.
+5.	Output Report: A structured report is generated for each call, detailing agent performance and rationale behind each metric.
+This solution is modular, scalable, and can be integrated into SAB’s quality assurance workflow.
+________________________________________
+3. Outcome / Benefits
+✅ End-to-End Automation
+Eliminates manual intervention, saving time and operational cost.
+✅ Objective & Consistent Evaluation
+Removes human bias, delivering standardized and fair assessments.
+✅ Actionable Insights for Training
+Provides detailed reasoning for each metric, supporting targeted training and continuous improvement.
+✅ Scalable & Reliable
+Supports high call volumes with multilingual capability, enabling broad quality monitoring coverage.
