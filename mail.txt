@@ -1,9 +1,20 @@
-Hi All,
+Dear All,
 
-Please find below the minutes of today’s meeting:
-	1.	Analysis of all 5 calls has been completed – PFA.
-	2.	The Call Center team will evaluate the results and share feedback.
-	3.	Ankit Khullar will provide the timelines for the next phase of project development.
-	4.	Invitation for the weekly WG meetings has been sent.
+Thank you for sharing your feedback. We have thoroughly reviewed it, and please find our remarks below:
 
-Best Regards,
+Key Observations:
+	1.	Shariah Regulation Question:
+	•	The evaluation has now been restricted to only the specified prohibited Islamic terms.
+	•	This has been fixed, tested, and is working as expected.
+	2.	Opening Script Question:
+	•	The opening script consists of multiple elements (agent’s first name, last name, customer name, greeting with customer name, readiness to take the call, etc.).
+	•	Based on the review of over 75 calls, we observed that the business has provided good scores even if only 2–3 of these elements were followed.
+	•	We suggest discussing whether the evaluation criteria should be made stricter going forward.
+	3.	Waiting Script Question:
+	•	The application did not detect instances of the agent placing customers on hold.
+	•	As a result, the waiting script was not followed.
+
+File-Specific Remark:
+	•	In the first file, the audio quality was unclear due to possible network issues, which impacted the evaluation.
+
+We propose discussing these points in detail during our next call. Please note that today’s call is cancelled, as we already have the WG meeting scheduled tomorrow, which most participants will be attending.
