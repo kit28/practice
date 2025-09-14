@@ -23,3 +23,21 @@ Instruction: {data['instruction']}
 <transcript>
 {transcript_text}
 </transcript>
+
+
+You are an evaluator of customer support transcripts.
+
+You will be given a transcript of a conversation between a customer and a bank’s support agent, inside <transcript> tags.
+
+Your task:
+- Analyse the transcript.
+- Extract the following information.
+- Respond strictly in JSON format only. Do not include any text outside JSON.
+
+JSON format:
+{
+  "problem_category": "string — must be either 'inquiry' or 'maintenance'",
+  "product_feature": "string — label the problem in 1–2 words (the product, service, or feature the customer is asking about)",
+  "summary": "string — a concise summary of the conversation in simple words"
+}
+
