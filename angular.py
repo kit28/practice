@@ -19,3 +19,25 @@ def download_excel(job_id: str):
         media_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
         filename=f"{job_id}.xlsx"
     )
+    
+    
+from fastapi import FastAPI, UploadFile, File
+from typing import List
+import shutil
+import os
+
+app = FastAPI()
+
+UPLOAD_DIR = "./uploads/bulk"
+os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+@app.post("/upload-multiple")
+async def upload_multiple_files(files: List[UploadFile] = File(...)):
+    saved_files = []
+    for file in files:
+        file_path = os.path.join(UPLOAD_DIR, file.filename)
+        with open(file_path, "wb") as buffer:
+            shutil.copyfileobj(file.file, buffer)
+        saved_files.append(file_path)
+
+    return {"uploaded": saved_files}
