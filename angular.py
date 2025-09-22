@@ -41,3 +41,35 @@ async def upload_multiple_files(files: List[UploadFile] = File(...)):
         saved_files.append(file_path)
 
     return {"uploaded": saved_files}
+    
+    
+
+from fastapi import FastAPI, UploadFile, File
+from typing import List
+import os
+import aiofiles
+
+app = FastAPI()
+
+BASE_UPLOAD_DIR = "./uploads"
+
+@app.post("/upload-folder")
+async def upload_folder(files: List[UploadFile] = File(...)):
+    saved_files = []
+
+    for file in files:
+        # The browser sends `filename` as webkitRelativePath (e.g. "subdir/file.xlsx")
+        relative_path = file.filename  
+        save_path = os.path.join(BASE_UPLOAD_DIR, relative_path)
+
+        # Create directories if needed
+        os.makedirs(os.path.dirname(save_path), exist_ok=True)
+
+        # Save asynchronously
+        async with aiofiles.open(save_path, 'wb') as out_file:
+            content = await file.read()
+            await out_file.write(content)
+
+        saved_files.append(save_path)
+
+    return {"saved": saved_files}
