@@ -73,3 +73,39 @@ async def upload_folder(files: List[UploadFile] = File(...)):
         saved_files.append(save_path)
 
     return {"saved": saved_files}
+    
+    
+from fastapi import FastAPI, UploadFile, File
+from typing import List
+import os
+import aiofiles
+
+app = FastAPI()
+
+BASE_UPLOAD_DIR = "./uploads"
+
+@app.post("/upload-folder")
+async def upload_folder(files: List[UploadFile] = File(...)):
+    if not files:
+        return {"error": "No files uploaded"}
+
+    # Take the root folder from the first file’s relative path
+    first_file_path = files[0].filename  # e.g. "ProjectData/audio/file1.wav"
+    root_folder = first_file_path.split("/")[0]  # "ProjectData"
+
+    # Build the absolute save path for this folder
+    save_folder_path = os.path.join(BASE_UPLOAD_DIR, root_folder)
+
+    # Save all files while preserving structure
+    for file in files:
+        relative_path = file.filename  # "ProjectData/audio/file1.wav"
+        save_path = os.path.join(BASE_UPLOAD_DIR, relative_path)
+
+        os.makedirs(os.path.dirname(save_path), exist_ok=True)
+
+        async with aiofiles.open(save_path, 'wb') as out_file:
+            content = await file.read()
+            await out_file.write(content)
+
+    # ✅ Return the folder path for future API calls
+    return {"saved_folder": save_folder_path}
