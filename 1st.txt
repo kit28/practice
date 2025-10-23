@@ -67,3 +67,9 @@ JSON format:
   "reason": "string — if score < 0.6 explain what the agent did wrong; if score ≥ 0.6 explain what the agent did well."
 }
 
+
+Please find below the current requirements and clarifications needed from the Verint/EA team regarding the call quality analysis:
+	1.	Bulk Export API: We require a bulk export API, as the existing setup currently supports only single-call exports.
+	2.	Call Frequency: Clarification is needed on the expected number of calls to be analyzed on a daily basis.
+	3.	Audio Access: Please confirm if it is possible to download audio files directly from the data source, rather than relying solely on Verint APIs.
+	4.	Export Criteria: We need clarification on the criteria for exporting calls — whether it will be based on date or on agent name. In case of agent-based exports, we will require the list of agents.
