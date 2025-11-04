@@ -110,3 +110,48 @@ final_df = pd.DataFrame(all_results)
 final_df.to_excel("PII_classification_results.xlsx", index=False)
 
 print("\n✅ Classification complete. Results saved to 'PII_classification_results.xlsx'")
+
+
+
+import pandas as pd
+
+# --- Input files ---
+data_file = "your_excel_with_multiple_sheets.xlsx"
+classified_file = "PII_classification_results.xlsx"
+output_file = "PII_results_by_sheet.xlsx"
+
+# --- Load classified results ---
+classified_df = pd.read_excel(classified_file)
+classified_df['column_name'] = classified_df['column_name'].astype(str).str.strip()
+classified_df['classification'] = classified_df['classification'].astype(str).str.strip()
+
+# --- Read original Excel ---
+xls = pd.ExcelFile(data_file)
+
+# --- Create writer to save multiple sheets ---
+with pd.ExcelWriter(output_file, engine='openpyxl') as writer:
+    for sheet_name in xls.sheet_names:
+        df = pd.read_excel(data_file, sheet_name=sheet_name)
+
+        if 'ColumnName' not in df.columns:
+            continue
+
+        # Clean column names
+        df['ColumnName'] = df['ColumnName'].astype(str).str.strip()
+
+        # Merge with classification results for this sheet
+        merged = pd.merge(
+            df,
+            classified_df[classified_df['sheet'] == sheet_name],
+            how='left',
+            left_on='ColumnName',
+            right_on='column_name'
+        )
+
+        # Drop redundant columns and clean final view
+        merged = merged.drop(columns=['column_name'], errors='ignore')
+
+        # Write to Excel (each sheet separately)
+        merged.to_excel(writer, index=False, sheet_name=sheet_name)
+
+print(f"✅ PII results saved sub-sheet-wise to '{output_file}'")
