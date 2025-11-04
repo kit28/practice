@@ -155,3 +155,17 @@ with pd.ExcelWriter(output_file, engine='openpyxl') as writer:
         merged.to_excel(writer, index=False, sheet_name=sheet_name)
 
 print(f"✅ PII results saved sub-sheet-wise to '{output_file}'")
+
+
+import pandas as pd
+
+# Read the original Excel file
+df = pd.read_excel("input.xlsx")
+
+# Create a new Excel writer
+with pd.ExcelWriter("output.xlsx", engine="openpyxl") as writer:
+    # Loop over unique sheet names
+    for sheet, data in df.groupby("sheetname"):
+        # Drop the 'sheetname' column for each sub sheet
+        data[["col_name", "classification"]].to_excel(writer, sheet_name=sheet[:31], index=False)
+
