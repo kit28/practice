@@ -1,20 +1,14 @@
-Dear All,
+Subject: Verint API Integration – Update and Clarifications Required
 
-Thank you for sharing your feedback. We have thoroughly reviewed it, and please find our remarks below:
+Hello Bony and Varun,
 
-Key Observations:
-	1.	Shariah Regulation Question:
-	•	The evaluation has now been restricted to only the specified prohibited Islamic terms.
-	•	This has been fixed, tested, and is working as expected.
-	2.	Opening Script Question:
-	•	The opening script consists of multiple elements (agent’s first name, last name, customer name, greeting with customer name, readiness to take the call, etc.).
-	•	Based on the review of over 75 calls, we observed that the business has provided good scores even if only 2–3 of these elements were followed.
-	•	We suggest discussing whether the evaluation criteria should be made stricter going forward.
-	3.	Waiting Script Question:
-	•	The application did not detect instances of the agent placing customers on hold.
-	•	As a result, the waiting script was not followed.
+Tushar and I had a discussion regarding the Verint API integration, and we have summarised our current understanding below:
+	1.	As per Paul from the Verint team, there is no bulk media download API available. We will be required to download audio files individually.
+	2.	The available API is currently in the Production environment, which we cannot access for testing. The Verint team is working on setting up a UAT environment, which is expected to be ready only after January. Once available, they will upload some dummy audio calls for our testing, and we will require access to this UAT environment to begin validation.
+	3.	The expected daily call volume for download is 2,000. We would like to confirm whether this number is final or subject to change as we progress.
+	4.	The EA team will finalise the integration approach and guide us on the interim steps, given that the UAT environment is not yet available.
+	5.	We need clarification on whether the audio files will be stored within our environment or streamed/replayed directly via the API for processing. If storage on our side is required, we need alignment on where these files will be maintained.
 
-File-Specific Remark:
-	•	In the first file, the audio quality was unclear due to possible network issues, which impacted the evaluation.
+Kindly review these points and let us know if we have missed anything or misunderstood any aspect.
 
-We propose discussing these points in detail during our next call. Please note that today’s call is cancelled, as we already have the WG meeting scheduled tomorrow, which most participants will be attending.
+We have a WG meeting tomorrow where we need to provide updates to the Call Quality WG team and to Sanjib. Your feedback would be greatly appreciated.
