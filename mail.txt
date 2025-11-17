@@ -12,3 +12,19 @@ Tushar and I had a discussion regarding the Verint API integration, and we have 
 Kindly review these points and let us know if we have missed anything or misunderstood any aspect.
 
 We have a WG meeting tomorrow where we need to provide updates to the Call Quality WG team and to Sanjib. Your feedback would be greatly appreciated.
+
+
+
+Subject: MOM from the Last WG Meeting
+
+Hi Hussain,
+
+Please find below the Minutes of Meeting (MoM) from the last Working Group session:
+	1.	Bulk Audio Download:
+Verint currently does not provide a bulk audio download API. However, we can use the single-audio download API, provided we receive permission to make as many API calls as the number of audio files we need to process daily.
+	2.	UAT Environment:
+The Verint team is working on setting up a UAT environment that we can use to test our pipeline. As shared by them, this may take a couple of months to be ready.
+	3.	Daily Call Volume:
+The expected daily call volume to be processed is approximately 2000. We will coordinate with the EA and Verint teams for their alignment on this number, as it directly impacts the number of API calls we will be making each day.
+
+Thank you.
