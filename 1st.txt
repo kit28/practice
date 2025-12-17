@@ -1,4 +1,29 @@
 ########################
+Subject: Call Quality Application – Production Enhancements and Timeline
+
+Dear All,
+
+We have successfully deployed both the frontend and backend components of the Call Quality application to the production server. During the final review prior to client handover, we identified a few functional limitations that merit attention:
+	1.	The current application is a replica of the live demo version. At present, a user can upload a folder, execute the pipeline, and download the results upon completion.
+	2.	If the same user logs in again, there is no provision to view or download results from previous executions.
+
+After internal discussions, we propose to address these gaps through the following enhancements, along with the associated timelines:
+
+Backend Enhancements (7 working days):
+	1.	Implementation of a scheduler to control pipeline execution on uploaded files, including the ability to run and stop the pipeline within a predefined time window, and to process only newly uploaded files.
+	2.	User-specific pipeline execution and result management, enabling segregation and retrieval of results based on individual users.
+
+Frontend Enhancements (7 working days):
+	1.	Development of a user-facing table to display uploaded documents.
+	2.	A dedicated view to track the status of previous pipeline executions.
+	3.	Functionality to download results from past executions.
+
+These points are being highlighted for your review and approval. Please let us know if we should proceed with the above scope and timelines.
+
+Kind regards,
+[Your Name]
+
+
 
 Task:
 Given a column name and its description, classify the column into one of the following labels:
