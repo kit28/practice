@@ -103,3 +103,50 @@ def classify_sheet(
     merged.drop(columns=["column_name"], inplace=True)
 
     return merged
+    
+    
+    
+    
+    
+import asyncio
+import json
+from typing import Dict, Any
+from tenacity import AsyncRetrying, wait_exponential, stop_after_attempt
+
+
+async def classify(self, prompt: str) -> Dict[str, Any]:
+    async with self.semaphore:
+        async for attempt in AsyncRetrying(
+            wait=wait_exponential(min=1, max=10),
+            stop=stop_after_attempt(1),
+            reraise=True,
+        ):
+            with attempt:
+                try:
+                    response = await asyncio.wait_for(
+                        self.client.chat.completions.create(
+                            model=self.model,
+                            messages=[
+                                {
+                                    "role": "system",
+                                    "content": "You are a precise data privacy analyst",
+                                },
+                                {
+                                    "role": "user",
+                                    "content": prompt,
+                                },
+                            ],
+                            temperature=self.temperature,
+                            response_format={
+                                "type": "json_schema",
+                                "json_schema": JSON_SCHEMA,
+                            },
+                        ),
+                        timeout=30,   # <<< HARD TIMEOUT (seconds)
+                    )
+
+                except asyncio.TimeoutError:
+                    raise TimeoutError("LLM request exceeded 30 seconds")
+
+                payload = response.choices[0].message.content
+                return json.loads(payload)
