@@ -1,0 +1,14 @@
+Hi All,
+
+I will be conducting the following activities this week to improve call quality accuracy:
+
+1. Testing two new models outside SAB — “Qwen3 ASR-1.7B” and “Qwen-Omni-30B-A3B-Instruct”. This will require a GPU VM instance for evaluation.
+2. Recording and reviewing sample Arabic and English audio calls on mobile devices to create a representative testing dataset.
+3. Comparing the generated transcripts from the new models against Whisper-generated transcripts to evaluate transcription quality and consistency.
+4. If the new models demonstrate improved performance over Whisper, we will proceed with parameter optimization and tuning for stable and consistent results.
+    Otherwise, we will focus on improving the current Whisper pipeline through audio enhancement techniques (where feasible) and further fine-tuning of Whisper parameters.
+
+Please let me know if there are any concerns or additional suggestions.
+
+Regards,
+Ankit
