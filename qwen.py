@@ -328,3 +328,76 @@ if __name__ == "__main__":
     #   language="ar"  → force Arabic
     #   language="en"  → force English
     result = transcribe(audio_path, language=LANGUAGE)
+    
+    
+    
+    
+    
+###########%%%%%%%#####
+
+
+# transcribe.py
+import torch
+from qwen_asr import Qwen3ASRModel
+
+# ── Config ───────────────────────────────────────────────────────────
+BASE_MODEL_DIR = "/mnt/newdrive/models"
+ASR_MODEL_DIR  = f"{BASE_MODEL_DIR}/Qwen/Qwen3-ASR-1.7B"
+ALIGNER_DIR    = f"{BASE_MODEL_DIR}/Qwen/Qwen3-ForcedAligner-0.6B"
+
+AUDIO_FILE     = "/mnt/newdrive/qwen_asr/1st.wav"   # change as needed
+# ─────────────────────────────────────────────────────────────────────
+
+
+def load_model():
+    print("Loading Qwen3-ASR model...")
+    model = Qwen3ASRModel.from_pretrained(
+        ASR_MODEL_DIR,
+        dtype=torch.bfloat16,
+        device_map="cuda:0",
+        max_inference_batch_size=32,
+        max_new_tokens=256,
+        forced_aligner=ALIGNER_DIR,          # loads aligner from local path
+        forced_aligner_kwargs=dict(
+            dtype=torch.bfloat16,
+            device_map="cuda:0",
+        ),
+    )
+    return model
+
+
+def format_timestamp(seconds: float) -> str:
+    minutes = int(seconds // 60)
+    secs    = seconds % 60
+    return f"{minutes:02d}:{secs:06.3f}"
+
+
+def transcribe(audio_file: str):
+    model = load_model()
+
+    print(f"Transcribing: {audio_file}")
+    results = model.transcribe(
+        audio=[audio_file],
+        language=["Arabic"],    # or "English", or None for auto-detect
+        return_time_stamps=True,
+    )
+
+    for r in results:
+        print("\n" + "═" * 60)
+        print(f"Language  : {r.language}")
+        print(f"Transcript: {r.text}")
+        print("\nTimestamps:")
+        for ts in r.time_stamps:
+            start = format_timestamp(ts[0])
+            end   = format_timestamp(ts[1])
+            word  = ts[2]
+            print(f"  [{start} → {end}]  {word}")
+
+    return results
+
+
+if __name__ == "__main__":
+    import sys
+    audio = sys.argv[1] if len(sys.argv) > 1 else AUDIO_FILE
+    transcribe(audio)
+
