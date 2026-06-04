@@ -1,0 +1,114 @@
+1st ----------------------------------------------
+A literal translation of the text you provided would therefore look something like this:
+Hello. I don't like this talk. Your friend is ... on social media. I will tell you, Shadi. I will tell you. I remember, I remember, Shadi.
+You say on his website about the ...
+I wanted the information on the website.
+On the website.
+We won't say.
+On the website.
+On the website.
+On the website.
+On the website.
+On the website.
+On the website.
+On the website.
+On the website.
+On the website.
+On the website.
+...
+(the phrase "على الموقع" = "on the website" repeats hundreds of times exactly as in the transcript)
+...
+Okay, Mr. Shadi, I have attended to / recorded the complaint.
+Ah, of course.
+Okay, I will make the solution.
+Okay.
+Future solution ... (unclear text)
+Because now we are escalating the complaint.
+Meaning, sir, every little while I ...
+Sir, I can no longer hear your voice.
+Sir, please repeat, I can hear you.
+Okay.
+In this case, communication ... (unclear)
+Since you have a problem related to ...
+We will raise the complaint.
+Mr. Shadi, a complaint has been created.
+In this case we will contact you so that we can agree on a suitable time.
+Okay.
+Can you confirm your mobile number?
+Go ahead.
+Is there anything else?
+Please tell me your name and mobile number.
+Is that in the application?
+Yes.
+Yes, I am currently inside the account.
+From the application.
+Where should I go?
+I am under "My Profile".
+Go ahead.
+Anything else?
+Account Information.
+A number appears here.
+221443563931
+Okay, Mr. Shadi.
+I am currently ...
+It enters the menu.
+It enters.
+Good.
+Yes.
+Okay, go to Account Information.
+Okay.
+There are large sections there as well.
+Beneficiaries.
+No.
+Why don't we try ... (unclear)
+Okay.
+This one.
+Thank you.
+Mr. Shadi.
+No, thank you.
+We will contact you whenever required.
+The sections marked "(unclear)" are not translatable because the Arabic itself is corrupted by speech-recognition errors rather than being meaningful Arabic text. If you have the original audio, I can help you get a much cleaner transcription using a better ASR model or forced alignment workflow.
+
+
+2nd ----------------------------------------
+Agent: Thank you for contacting Alawwal Bank. How may I help you?
+Customer: Peace be upon you.
+Agent: And peace be upon you, and God's mercy and blessings.
+Customer: I have a relative who is outside the country. He has an appointment/request with you, but he is unable to contact you from there. We have been trying to communicate on his behalf regarding this matter, but I don't know what the problem is. Maybe he wants to make a transfer or something like that. There is money in the account.
+Agent: In this case, the customer himself must contact us. We cannot deal with a third party on behalf of the customer. The customer must contact us directly.
+Customer: But he can't get through to you. Is there any other way? He is outside the country.
+Agent: He can contact us through the application using the live chat feature.
+Customer: Through the application? I don't understand.
+Agent: Yes, through the application. He can communicate with us through Live Chat.
+Customer: The Live Chat service?
+Agent: Correct.
+Customer: Okay. And they will respond to him directly?
+Agent: Correct.
+Customer: At any time?
+Agent: Yes, he can speak with them, and they will assist him regarding this matter.
+Customer: Alright.
+Agent: Anything else?
+Customer: No, thank you.
+Agent: Thank you for contacting Alawwal Bank. Goodbye.
+
+
+3rd ----------------------------------------------------------------
+Customer: Hello, peace be upon you.
+Agent: Peace be upon you too. How can I help you?
+Customer: I have an ATM/debit card. I was at the mall, and after that I couldn't find it. I think I lost it.
+Agent: Have you checked whether it's still active?
+Customer: No, I couldn't find it.
+Agent: Okay. Let me guide you through blocking the card using the Alawwal Bank app.
+Customer: Okay.
+Agent: When you log in to the app, do you see red icons that contain the account information?
+Customer: Yes.
+Agent: Click on them.
+Customer: A small icon appears.
+Agent: Then you should see all the cards linked to your account. Is that correct?
+Customer: Yes.
+Agent: You only have the ATM/debit card, correct?
+Customer: Correct.
+Agent: Select it and block/deactivate it.
+Customer: Okay.
+Agent: You're welcome.
+Customer: Thank you very much.
