@@ -1,0 +1,831 @@
+call - 9157720087860002641.wav
+
+Agent:
+Thank you for contacting us. How may I help you?
+
+Customer:
+Peace be upon you.
+
+I have one of my relatives who has an appointment/case with you. He is currently outside the country and has an appointment from your side. However, he is unable to contact you from where he is. Previously we were communicating regarding this appointment, but I don't know what the problem is now. Maybe he wants to transfer it or do something similar. There is credit/balance available.
+
+Agent:
+In this case, the same customer himself must contact us directly. Someone else cannot contact us on behalf of the customer. The customer must contact us personally.
+
+Customer:
+Okay, but since he is outside the country, he is unable to contact you. Is there any other way?
+
+Agent:
+Yes, he can contact us through the application using the live chat feature.
+
+Customer:
+You mean through the app?
+
+Agent:
+That's correct. Through the application he can communicate with us via Live Chat.
+
+Customer:
+Live Chat, right?
+
+Agent:
+Yes.
+
+Customer:
+And they will respond immediately?
+
+Agent:
+Yes, they will reply directly. He can contact them at any time, and they will assist him regarding this matter.
+
+Customer:
+Okay.
+
+Agent:
+Anything else I can help you with?
+
+Customer:
+No, thank you.
+
+Agent:
+Thank you for contacting us. Goodbye.
+
+################################################################
+
+call - 26_11.wav
+
+This transcript is much noisier than the previous one and appears to contain many ASR errors. Based on the context, the most likely English translation is:
+
+Agent:
+Hello, thank you for contacting us. How may I assist you?
+
+Customer:
+Hello sister. I have a complaint/request that was previously submitted. I received a notification that it was closed, but I would like to know the latest update regarding it.
+
+Agent:
+Can you please provide your ID number?
+
+Customer:
+Yes. It is 100XXXXXXX (the number is partially unclear in the transcript).
+
+Agent:
+Thank you. Let me check the complaint for you.
+
+(Agent reviews the case.)
+
+Agent:
+Dear customer, according to the records, the complaint submitted by you has already been responded to. After verification, we found that there is another complaint with the same subject matter, and work is currently underway to resolve it.
+
+Customer:
+So there is another complaint regarding the same issue?
+
+Agent:
+Yes. There is another complaint with the same subject, and it is currently being processed. Since it has not yet been resolved, it has been escalated again.
+
+Customer:
+I don't quite understand. Which complaint is this?
+
+Agent:
+The new complaint is related to the same issue and is currently under review and processing.
+
+Customer:
+The earlier complaint was the first one. Then I submitted another complaint through a different channel, and today I was told it would be resolved within one business day.
+
+Agent:
+Yes, that is correct.
+
+Customer:
+I checked the application, but I don't see any updates. Has anything happened regarding the matter?
+
+Agent:
+The issue is still under processing. The recommended action is to follow up with your Relationship Manager, especially if it is an important matter.
+
+Customer:
+Okay.
+
+Agent:
+Thank you for contacting us.
+
+Customer:
+Thank you.
+
+Agent:
+Thank you for contacting us. Have a nice day.
+
+############################################################
+
+call - 28_03.wav
+
+Agent:
+Thank you for contacting us. How can I assist you?
+
+Customer:
+Hello. I noticed a transaction/charge on my account/card. An amount of about 170 SAR was deducted, and I did not perform that transaction.
+
+Agent:
+I understand.
+
+Customer:
+I previously called from another phone, and they told me to cancel/block the card. They also gave me a reference number and told me to submit a dispute/claim to recover the amount.
+
+Agent:
+Okay. Can you provide your ID number?
+
+Customer:
+(Provides ID number – partially unclear in the transcript.)
+
+Agent:
+Thank you. And which card are you referring to?
+
+Customer:
+(The card in question.)
+
+Agent:
+I can see here that you have already reported this card, correct?
+
+Customer:
+Yes. They gave me a reference number and told me to submit a claim so that the money could be returned.
+
+Agent:
+That's correct. This reference number is related to the dispute/claim regarding the deducted amount.
+
+Customer:
+Okay.
+
+Agent:
+The dispute request has been registered and assigned a case/reference number. The process is ongoing.
+
+Customer:
+Okay, understood.
+
+Agent:
+Do you have any other questions?
+
+Customer:
+No, that's all.
+
+Agent:
+Thank you for contacting us, Mr. Mohammed.
+
+Customer:
+Thank you.
+
+Agent:
+Thank you. Have a good day.
+
+
+#############################################################
+
+call - 28_04.wav
+
+This transcript is quite noisy, but the overall meaning is fairly clear. The conversation appears to be about a customer who cannot access online banking because their account has been blocked.
+
+English Translation
+
+Agent:
+Thank you for contacting the bank. How may I assist you?
+
+Customer:
+I have a problem. I think my account/application access is blocked or something similar. I'm trying to log in, but it doesn't work. I don't know what the issue is.
+
+Agent:
+When you try to log in, what message do you see? Is it related to the username or password?
+
+Customer:
+I'm not sure. It just shows that it's blocked or something like that.
+
+Agent:
+Do you see a message such as "blocked" or an error code?
+
+Customer:
+Yes, something like "blocked" and there is an error code.
+
+Agent:
+In that case, I can transfer/connect you to the appropriate team.
+
+Customer:
+Okay.
+
+Agent:
+This department only handles fraud-related cases and customers who have fraud issues on their accounts.
+
+Customer:
+I understand, but how do I contact them? I don't know what to do.
+
+Agent:
+You can reach them through this same number. Call again and select the appropriate option from the menu.
+
+Customer:
+So I can use this same number?
+
+Agent:
+Yes, through this same number. Choose option 1 after selecting the language.
+
+Customer:
+Okay, understood.
+
+Agent:
+Anything else I can help you with?
+
+Customer:
+No, thank you.
+
+Agent:
+Thank you for contacting the bank. Have a good day.
+
+
+################################################################
+
+call - 8.wav
+
+This transcript is extremely noisy and contains long stretches of repeated ASR hallucinations ("على الموقع..."). Ignoring those repetitions and focusing on the meaningful portions, the conversation appears to be:
+
+Agent:
+Hello. How can I help you?
+
+Customer:
+I submitted a complaint and wanted to know the status of it.
+
+Agent:
+Yes, I can see the complaint.
+
+Customer:
+I want to know what the outcome is. I've been following up repeatedly.
+
+Agent:
+I understand. However, because this matter is related to your Relationship Manager, you'll need to coordinate with them regarding the complaint.
+
+Customer:
+I'm having difficulty communicating with the Relationship Manager. That's why I'm following up through customer service.
+
+Agent:
+In that case, we can raise a complaint/follow-up request. Since the issue concerns the Relationship Manager, the appropriate action is to contact them and agree on a suitable time for communication.
+
+Customer:
+How can I find the Relationship Manager's contact details?
+
+Agent:
+Please open the banking application and go to your profile/account information section.
+
+Customer:
+I'm already inside the application. Where exactly should I look?
+
+Agent:
+Go to My Profile → Account Information. You should see the Relationship Manager's details there.
+
+Customer:
+I don't see it.
+
+Agent:
+Try checking the menu again under Account Information. The Relationship Manager's contact details should appear there.
+
+Customer:
+Okay, I'll check.
+
+Agent:
+Is there anything else I can help you with?
+
+Customer:
+No, thank you.
+
+Agent:
+Thank you for contacting us. Have a nice day.
+
+
+##############################################################################
+
+call - 111.wav
+
+Agent:
+Peace be upon you.
+
+Customer:
+Peace be upon you too. I want to check something regarding my account. I'm tired of trying to understand this. There is an amount that is restricted in my account. Why is that?
+
+Agent:
+May I have your ID number?
+
+Customer:
+(Provides ID number.)
+
+Agent:
+Let me check.
+
+I can see that your current account balance is 24,782.46 SAR.
+
+Customer:
+Okay.
+
+Agent:
+The amount currently available for use is 14,188.46 SAR.
+
+Customer:
+Why?
+
+Agent:
+As I explained, there is a restricted amount on the account.
+
+The total restricted amount is 10,593.72 SAR.
+
+Of that amount, 4,837.13 SAR is reserved in your favor.
+
+Customer:
+Okay.
+
+Agent:
+There are also three separate amounts of approximately 233 SAR each, totaling around 900 SAR. These are related to external entities that have placed holds on the account.
+
+Customer:
+Okay.
+
+Agent:
+Most likely these are related to violations or fines.
+
+Customer:
+Okay.
+
+Agent:
+There is also another restricted amount of 6,456.54 SAR.
+
+Customer:
+Why is it restricted? What's the reason?
+
+Agent:
+The amount is restricted on the account. If there are any claims or obligations against you, deductions can be made from that amount.
+
+Customer:
+I'm not asking about the fines. I understand that around 900 SAR relates to violations. I'm asking specifically about the other amount.
+
+Agent:
+I understand.
+
+Customer:
+What's the solution for this issue?
+
+Agent:
+The issue isn't from the bank. These restrictions come from external authorities.
+
+Customer:
+I understand, but what should I do?
+
+Agent:
+You need to contact the relevant authorities and explain that the funds are available and should be settled. Once they release the hold, the restriction will be removed.
+
+Customer:
+Okay.
+
+Agent:
+The same situation exists across multiple banks. The restrictions are coming from the authorities, not from us.
+
+Customer:
+Fine, but what about the 6,456 SAR? Why is it still restricted?
+
+Agent:
+No one at the bank can release that amount. The restriction comes from the external authority.
+
+Customer:
+Can I withdraw it?
+
+Agent:
+You can go to an ATM and withdraw the amount that is currently available in your account.
+
+Customer:
+I can withdraw all the available balance?
+
+Agent:
+Yes, you can withdraw the available amount.
+
+Customer:
+I've been dealing with this for eight months.
+
+Agent:
+I understand, but regarding the restriction itself, you need to follow up with the authority that placed it.
+
+Customer:
+Okay.
+
+Agent:
+Thank you for contacting the bank. Goodbye.
+
+########################################################################################
+
+call - 191.wav
+
+Agent:
+Thank you for calling. How can I help you?
+
+Customer:
+Hello, brother Mohammed. Brother Mohammed, I have a personal financing inquiry. I want personal financing with debt consolidation (balance transfer).
+
+Agent:
+Do you currently have a salary account with us?
+
+Customer:
+I want personal financing and debt consolidation.
+
+Agent:
+For financing and debt consolidation, this is handled through the branch. That means if you have financing with another bank and want to transfer the debt to us, it has to be processed through a branch.
+
+Customer:
+I just want to know the requirements.
+
+Agent:
+I understand.
+
+Customer:
+I want to know what documents or requirements are needed.
+
+Agent:
+Okay. I will provide you with the financing department number so you can contact them directly.
+
+Customer:
+Okay.
+
+Agent:
+Are you ready for the number?
+
+Customer:
+Yes.
+
+Agent:
+One, two, four...
+
+Customer:
+Yes.
+
+Agent:
+Three, five, six.
+
+Customer:
+Thank you.
+
+Agent:
+You're welcome. Is there any other service I can help you with?
+
+Customer:
+No.
+
+Agent:
+Thank you for calling. Goodbye.
+
+#######################################################################################################
+
+call - 191.wav
+
+Agent:
+Thank you for calling. How can I help you?
+
+Customer:
+Hello.
+
+Agent:
+Hello. How can I help you?
+
+Customer:
+Peace be upon you.
+
+Agent:
+And peace be upon you. How can I assist you?
+
+Customer:
+I received something regarding updating my information... updating my data.
+
+Agent:
+Okay. They are asking for a personal information update?
+
+Customer:
+Yes.
+
+Agent:
+Please provide your ID number.
+
+Customer:
+1026...
+
+Agent:
+1026...
+
+Customer:
+89...
+
+Agent:
+89...
+
+Customer:
+4004.
+
+Agent:
+Okay. Please wait a moment.
+
+Agent:
+Can you tell me your current account balance?
+
+Customer:
+Around half a million, approximately.
+
+Agent:
+Okay. And what is the branch where you opened the account?
+
+Customer:
+It's been a long time, I don't really remember.
+
+Agent:
+Which branch did you open the account in?
+
+Customer:
+I think it was near my workplace at the time. I don't remember exactly.
+
+Agent:
+Okay, please wait a moment.
+
+Customer:
+Yes.
+
+Agent:
+Was it the branch on Khurais Road?
+
+Customer:
+Yes, I think it was the Khurais Road branch.
+
+Agent:
+Okay, please wait a moment.
+
+(Pause while checking the account.)
+
+Agent:
+Everything appears clear. Your information is complete. There are no pending data update requirements on your account.
+
+Customer:
+No? Because I submitted a request regarding a card, and someone told me there was...
+
+Agent:
+No, no.
+
+Customer:
+What was it called?
+
+Agent:
+There is an issue related to reference number 085729...
+
+Customer:
+Correct.
+
+Agent:
+But it's not clear to me why they told you that you need to update your information. As far as I can see, everything is fine.
+
+Customer:
+Everything is okay?
+
+Agent:
+Yes, everything is fine.
+
+Customer:
+Thank you, sister. Thank you.
+
+Agent:
+You're welcome.
+
+Customer:
+Do you know what the reason could be?
+
+Agent:
+No, I don't see any issue from my side.
+
+Customer:
+Okay, thank you.
+
+Agent:
+Thank you for calling. Goodbye.
+
+
+############################################################################
+
+call - 198.wav
+
+Customer:
+Peace be upon you.
+
+Agent:
+Peace be upon you too. Welcome. How can I help you?
+
+Customer:
+I have a question regarding your cards.
+
+Agent:
+Yes.
+
+Customer:
+I currently have both the Platinum card and the Cashback card.
+
+Agent:
+Okay.
+
+Customer:
+I want to ask about travel benefits. Between the Platinum card and the Cashback card, which one is better for travel?
+
+Agent:
+The Platinum card earns reward points when you use it. The Cashback card gives you cashback on purchases.
+
+Customer:
+Yes.
+
+Customer:
+Another thing, when I try to make a booking or check the card benefits, it says something about airport lounges. Is that available on both the Platinum and Cashback cards?
+
+Agent:
+Yes, regarding the airport lounge service, access is provided through the lounge application.
+
+Customer:
+Okay.
+
+Agent:
+You need to register through the lounge application, and it will show you the lounges available at the airports.
+
+Customer:
+Right.
+
+Agent:
+Once registered, you can see the lounges that are available.
+
+Customer:
+Okay. Are the same lounge benefits available on both cards?
+
+Agent:
+No.
+
+Customer:
+Not the same?
+
+Agent:
+Correct, they are not the same.
+
+Customer:
+Okay.
+
+Agent:
+The benefits differ between the cards.
+
+Customer:
+Understood. Thank you very much.
+
+Agent:
+You're welcome.
+
+Customer:
+Peace be upon you.
+
+Agent:
+Peace be upon you.
+
+##############################################################################
+
+call - 199.wav
+
+Agent:
+Thank you for calling. How can I help you?
+
+Customer:
+Please, I wanted to ask about my salary. Has it been deposited yet or not?
+
+Agent:
+May I have your name, please?
+
+Customer:
+Abdullah Al-Barri.
+
+Agent:
+Okay. And your ID number?
+
+Customer:
+(Provides ID number.)
+One... one...
+
+Agent:
+Yes.
+
+Customer:
+Two one...
+
+Agent:
+Yes.
+
+Customer:
+Nine four four...
+
+Agent:
+Okay.
+
+Customer:
+Yes.
+
+Agent:
+Mr. Abdullah Al-Barri, one moment please.
+
+(Agent checks the account.)
+
+Agent:
+The salary has not been deposited.
+
+Customer:
+Okay. Is it clear when it will be deposited, or anything like that?
+
+Agent:
+No, that information is not clear to us. You need to contact your employer.
+
+Customer:
+The employer?
+
+Agent:
+Yes.
+
+Customer:
+I mean, can you see whether it's scheduled to be deposited today or tonight or something?
+
+Agent:
+No, honestly that is not visible to us.
+
+Customer:
+So since the people around us have already received theirs, mine could still be deposited?
+
+Agent:
+Yes.
+
+Customer:
+Okay, okay.
+
+Agent:
+May God protect you.
+
+Customer:
+Thank you.
+
+Agent:
+Thank you.
+
+Customer:
+Thank you, thank you.
+
+
+##############################################################################
+
+call - 200.wav
+
+Agent:
+Thank you for contacting us. How can I assist you?
+
+Customer:
+Peace be upon you.
+
+Agent:
+And peace be upon you.
+
+Customer:
+Dear, I was transferred here because there isn't a service for personal financing.
+
+Agent:
+You mean regarding financing?
+
+Customer:
+Yes, specifically personal financing.
+
+Agent:
+Okay. Let me give you the financing department number.
+
+Customer:
+Okay.
+
+Agent:
+The financing department customer service team handles financing matters and financing inquiries.
+
+Customer:
+Okay, what's the number?
+
+Agent:
+870...
+
+Customer:
+Okay.
+
+Agent:
+124...
+
+Customer:
+Yes.
+
+Agent:
+3567.
+
+Customer:
+Okay, okay.
+
+Agent:
+Dear customer, that's the number.
+
+Customer:
+Thank you.
+
+Agent:
+You're welcome. May God bless you.
+
+Customer:
+Thank you.
+
+Agent:
+Goodbye.
