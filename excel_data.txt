@@ -1,0 +1,26 @@
+Call	Transcript	Whisper_transcript	Business_feedback	Remark
+9157720087860002641.wav			"1. Full opening script, with agent 1st and 2nd name
+2. Correct closing script
+3. Asked additional services"	
+26_11.wav			"1. Full opening script, with agent 1st and 2nd name
+2. Correct holding script"	
+28_03.wav			"1. Agent did not welcome with customer name
+2. Agent aked additional services"	
+28_04.wav			"1. Did not welcome with customer's name, Mr Farhan is the 2nd name of agent.
+2. Did not ask for additional services"	
+8.wav			"1. Agent asked for customer name, and said it twice
+2. Agent asked for additional services
+3. Agent asked for ID number
+4. No complaint was raised"	
+200.wav			1. Used full opening script	
+199.wav			"1. Used full opening script
+2. Mentioned customer name twice
+3. Asked additional services"	
+198.wav			"1. Agent did not welcome with customer name and did not mention it twice.
+2. Agent asked for any additonal services
+3. Agent used closing script."	
+197.wav			"1. Did not welcome with customer name.
+2. Used holding and returning script"	
+191.wav			1. did not welcome with customer's name and did not mention customer name twice. Mohammed is agent's name.	
+111.wav			"1. The agent used SAMA.
+2. Agent did welcome with customer's name."	
