@@ -34,5 +34,29 @@ widths[2] = 12      # Overall
 question_end = ws.max_column - 3
 
 for c in range(3, question_end + 1):
+   
+   
+   
+   
+   
+
+# Maintain category order in Detailed_Report
+df["Sub_Category"] = pd.Categorical(
+    df["Sub_Category"],
+    categories=CATEGORY_ORDER,
+    ordered=True
+)
+
+# Preserve question order within each category
+df["Question_Order"] = range(len(df))
+
+df = (
+    df.sort_values(
+        ["Sub_Category", "Question_Order"],
+        kind="stable"
+    )
+    .drop(columns=["Question_Order"])
+    .reset_index(drop=True)
+)
     
     
