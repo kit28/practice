@@ -108,3 +108,86 @@ print("\n================================")
 print("Transcription completed.")
 print(f"Excel file: {OUTPUT_EXCEL}")
 print("================================")
+
+
+
+import torch
+from transformers import AutoProcessor, CohereAsrForConditionalGeneration
+from transformers.audio_utils import load_audio
+
+# ==========================================
+# Configuration
+# ==========================================
+
+MODEL_PATH = "/data0/HDD-data/GENAI/cohere-transcribe-arabic-07-2026"
+AUDIO_FILE = "call.wav"
+
+# ==========================================
+# Load processor and model
+# ==========================================
+
+print("Loading processor...")
+
+processor = AutoProcessor.from_pretrained(
+    MODEL_PATH,
+    local_files_only=True
+)
+
+print("Loading model...")
+
+model = CohereAsrForConditionalGeneration.from_pretrained(
+    MODEL_PATH,
+    device_map="auto",
+    local_files_only=True
+)
+
+print("Model loaded.")
+
+# ==========================================
+# Load audio
+# ==========================================
+
+audio = load_audio(
+    AUDIO_FILE,
+    sampling_rate=16000
+)
+
+# ==========================================
+# Prepare input
+# ==========================================
+
+inputs = processor(
+    audio,
+    sampling_rate=16000,
+    return_tensors="pt",
+    language="ar"
+)
+
+inputs = inputs.to(model.device, dtype=model.dtype)
+
+# ==========================================
+# Generate transcription
+# ==========================================
+
+print("Transcribing...")
+
+with torch.no_grad():
+    outputs = model.generate(
+        **inputs,
+        max_new_tokens=256
+    )
+
+# ==========================================
+# Decode
+# ==========================================
+
+text = processor.decode(
+    outputs,
+    skip_special_tokens=True
+)
+
+print("\n================================")
+print("TRANSCRIPTION")
+print("================================")
+print(text)
+print("================================")
