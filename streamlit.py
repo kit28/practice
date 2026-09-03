@@ -1,28 +1,42 @@
-import pandas as pd
+Hi Tushar,
 
-# File paths
-file_a = "A.xlsx"
-file_b = "B.xlsx"
+I wanted to provide an update on the Knowledge Transfer (KT) sessions conducted for the Call Quality project.
 
-# Read Excel files
-df_a = pd.read_excel(file_a)
-df_b = pd.read_excel(file_b)
+I have completed three KT sessions with Nikhil, covering approximately four hours in total. During these sessions, I have covered all the major aspects of the project. The only remaining activity from the KT perspective is for Nikhil to independently go through the codebase in detail, which can be done once he is onboarded and has access to the required systems and repositories.
 
-# Get unique IDs from A
-ids_a = set(df_a["ID"].dropna().astype(str).str.strip())
+Topics Covered During KT
 
-# Get unique User Acc Names from B
-ids_b = set(df_b["User Acc Name"].dropna().astype(str).str.strip())
+1. Project Overview
+    * Detailed explanation of the project and its objectives.
+    * Problem statement and business use case.
+    * Overall purpose and functionality of the Call Quality solution.
+2. Call Quality Application Overview
+    * End-to-end application architecture and workflow.
+    * Overview of the backend APIs and their respective functionalities.
+3. Control-M Scheduler
+    * Explanation of how the Control-M agent scheduler works.
+    * Scheduling and execution flow of the Call Quality pipeline.
+4. Call Quality Parameters and Prompts
+    * Detailed walkthrough of all 21 question/quality parameters.
+    * Explanation of the prompts associated with each parameter and their purpose.
+5. Code Walkthrough and Data Flow
+    * Overall code structure and key components.
+    * End-to-end data flow within the application.
+    * How the pipeline is executed.
+    * Where input and intermediate data are stored.
+    * Where the final results and reports are stored.
+    * How the generated reports are presented in the application.
+6. Current Application Limitations and Future Enhancements
+    * Current shortcomings and limitations of the application.
+    * Expected enhancements and requirements for Phase 2 and Phase 3.
 
-# Find IDs present in B but NOT in A
-ids_only_in_b = sorted(ids_b - ids_a)
+Remaining Activities
 
-# Create output DataFrame
-result = pd.DataFrame({"User ID": ids_only_in_b})
+1. Nikhil will go through the codebase thoroughly once he is onboarded and has the required access.
+2. I will complete the remaining project documentation.
+3. Once Nikhil is fully onboarded, we can have additional KT sessions as required to address any questions or clarify specific areas of the project.
 
-# Save to a new Excel file
-output_file = "IDs_in_B_not_in_A.xlsx"
-result.to_excel(output_file, index=False)
+Overall, the major functional, technical, and operational aspects of the Call Quality project have been covered during the KT sessions.
 
-print(f"Found {len(ids_only_in_b)} unique IDs.")
-print(f"Output saved to: {output_file}")
+Regards,
+Ankit
