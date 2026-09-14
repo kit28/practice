@@ -44,3 +44,7 @@ podman run --rm \
   serve /models/cohere \
   --served-model-name cohere-transcribe-arabic-07-2026 \
   --trust-remote-code
+
+
+tr '\0' ' ' < /proc/2346459/cmdline
+echo
