@@ -1,42 +1,43 @@
-Hi Tushar,
+Hi Hussain and Team,
 
-I wanted to provide an update on the Knowledge Transfer (KT) sessions conducted for the Call Quality project.
+Thank you for joining today’s call.
 
-I have completed three KT sessions with Nikhil, covering approximately four hours in total. During these sessions, I have covered all the major aspects of the project. The only remaining activity from the KT perspective is for Nikhil to independently go through the codebase in detail, which can be done once he is onboarded and has access to the required systems and repositories.
+Please find below the key points discussed and agreed upon during the meeting:
 
-Topics Covered During KT
+1. Opening Script, Returning Services & Additional Services
 
-1. Project Overview
-    * Detailed explanation of the project and its objectives.
-    * Problem statement and business use case.
-    * Overall purpose and functionality of the Call Quality solution.
-2. Call Quality Application Overview
-    * End-to-end application architecture and workflow.
-    * Overview of the backend APIs and their respective functionalities.
-3. Control-M Scheduler
-    * Explanation of how the Control-M agent scheduler works.
-    * Scheduling and execution flow of the Call Quality pipeline.
-4. Call Quality Parameters and Prompts
-    * Detailed walkthrough of all 21 question/quality parameters.
-    * Explanation of the prompts associated with each parameter and their purpose.
-5. Code Walkthrough and Data Flow
-    * Overall code structure and key components.
-    * End-to-end data flow within the application.
-    * How the pipeline is executed.
-    * Where input and intermediate data are stored.
-    * Where the final results and reports are stored.
-    * How the generated reports are presented in the application.
-6. Current Application Limitations and Future Enhancements
-    * Current shortcomings and limitations of the application.
-    * Expected enhancements and requirements for Phase 2 and Phase 3.
+* The major issue identified with the evaluation of the Opening Script, Returning Services, and Additional Services questions is related to the current STT module.
+* We expect improvements in transcription quality once the new model is deployed, currently planned for October.
 
-Remaining Activities
+2. Calls That End Abruptly
 
-1. Nikhil will go through the codebase thoroughly once he is onboarded and has the required access.
-2. I will complete the remaining project documentation.
-3. Once Nikhil is fully onboarded, we can have additional KT sessions as required to address any questions or clarify specific areas of the project.
+A. Customer-Ended Calls
 
-Overall, the major functional, technical, and operational aspects of the Call Quality project have been covered during the KT sessions.
+* In cases where the customer ends the call abruptly, we currently do not have information to reliably determine that the call was terminated by the customer.
+* Therefore, the agent should not be evaluated negatively based on the call ending abruptly, as the agent may not have had an opportunity to complete the required steps.
+* There were several instances in the feedback sheet where the customer had ended the call, but the AI evaluation was marked as incorrect. Such cases should not be considered as incorrect evaluations.
+
+B. Agent-Ended Calls
+
+* As previously agreed, scenarios where the agent ends the call will be addressed as part of Phase 3 of the project.
+
+3. Unnecessarily Long Call Duration
+
+* Most of the cases flagged as incorrect under the unnecessary call-duration criterion appear to be subjective in nature.
+* Hussain and the team will discuss this internally and identify whether there are any specific indicators, steps, or objective criteria that can be incorporated to evaluate this parameter more accurately.
+* The team will share the identified criteria with us once finalized.
+
+4. Wrong Line / Wrong Number Calls
+
+* Even in cases where the customer has dialed the wrong line/number, the agent is still expected to ask the Additional Services question as per the defined process.
+
+5. Testing & Feedback
+
+* As discussed, the Call Quality team will pause further testing and feedback until the new STT model is deployed.
+* This is because the current application has known transcription-related limitations, which are impacting the accuracy of several evaluation parameters.
+* Once the new model is deployed, testing and feedback can resume based on the improved transcription quality.
+
+These were the key points discussed during today’s meeting. Please let us know if we have missed or misinterpreted any point discussed during the call.
 
 Regards,
 Ankit
