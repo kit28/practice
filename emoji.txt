@@ -1,18 +1,36 @@
-Emoji
-Use Case
-Description
-ðŸ¦
-Banking
-Represents financial institutions or customer service in a bank
-ðŸ¤–
-AI
-Universal symbol for AI-powered automation
-ðŸŽ§
-Call Center
-Suggests audio/call support or agents wearing headsets
-ðŸ“ž
-Phone Call
-Reflects the nature of the audio input
-ðŸ§¾
-Transcripts / Summaries
-Matches output like transcript or summary
+Data Scientist with 5 years of experience building GenAI, NLP, and LLM-powered enterprise solutions.
+Experienced in conversational AI, RAG systems, LLM fine-tuning, evaluation frameworks, and AI automation
+platforms. Skilled in taking AI products from research and architecture design to deployment and optimization.
+
+
+Senior Analyst, Evalueserve Oct 2024 - Present
+Researched and implemented a GenAI-powered call quality automation platform for automated call
+auditing and evaluation.
+Built LLM-based evaluation workflows for conversational quality metrics, compliance checks,
+summarization, and scoring.
+Evaluated and benchmarked multiple open-source and enterprise LLMs for accuracy, latency, and production suitability.
+
+
+Data Scientist, Oriserve June 2022 - Sep 2024
+Orimon : Built and launched orimon.ai, a conversational AI chatbot builder. Integrated bot training
+through websites, PDFs, FAQs, for enhanced knowledge and contextual understanding.
+OriChain : Worked on Orichain, a wrapper for RAG-GenAI based chatbots. Has the support for various
+LLMs and multiple platforms like AWS bedrock, azure AI, anthropic etc.
+Ecom Bot : Designed and optimized ecommerce AI assistant pipelines using intent prediction, entity
+extraction, vector databases, context retrieval, and GenAI, improving product retrieval accuracy by
+30% and reducing support tickets by 25%.
+Dynamic Lead Generation : Engineered DLG with live lead extraction and summarization for bots on
+orimon. Resulted in average increment of 20% more lead collection on various brands of different
+domains.
+ECOM : Developed a separate training and inference feature for E-comm bots. Used combination of
+intent prediction, entity extraction, vector DB, gen AI for precise product information gathering,
+searching, comparing and maintaining previous contexts. It reduced customer support tickets by 25%
+and increased the sales by around 15% for some brands.
+Clustering System : Build a clustering system for session analytics, using combination of LaBSE
+embeddings and genAI
+
+
+Junior Data Scientist, Oriserve
+DMS : Researched and implemented Dialogue Management System (DMS). Build the whole AI model
+architecture from scratch, using Transformers, NN. Minimizing the time and effort required to build
+chatbot flows using rule based architecture.
