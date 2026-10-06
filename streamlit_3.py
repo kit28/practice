@@ -41,3 +41,75 @@ asyncio.run(
         token="YOUR_BEARER_TOKEN"
     )
 )
+
+
+import httpx
+import asyncio
+
+
+async def upload_document(
+    file_path: str,
+    title: str,
+    category: str,
+    description: str = None,
+    sub_category: str = None,
+    token: str = "YOUR_BEARER_TOKEN"
+):
+    url = "https://localhost:8000/api/documents/upload"
+
+    headers = {
+        "Authorization": f"Bearer {token}"
+    }
+
+    # Form fields
+    data = {
+        "title": title,
+        "category": category,
+    }
+
+    # Optional fields
+    if description is not None:
+        data["description"] = description
+
+    if sub_category is not None:
+        data["sub_category"] = sub_category
+
+    # File
+    with open(file_path, "rb") as f:
+
+        files = {
+            "file": (
+                file_path.split("/")[-1],
+                f,
+                "application/octet-stream"
+            )
+        }
+
+        async with httpx.AsyncClient(
+            verify=False,
+            timeout=120.0
+        ) as client:
+
+            response = await client.post(
+                url,
+                headers=headers,
+                data=data,
+                files=files
+            )
+
+    print("HTTP Status:", response.status_code)
+    print("Response:", response.text)
+
+    return response
+
+
+asyncio.run(
+    upload_document(
+        file_path="/path/to/document.pdf",
+        title="My Document",
+        category="Finance",
+        description="Test document",
+        sub_category="Reports",
+        token="YOUR_BEARER_TOKEN"
+    )
+)
