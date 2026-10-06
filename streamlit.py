@@ -1,43 +1,132 @@
-Hi Hussain and Team,
+import os
+import asyncio
+import httpx
 
-Thank you for joining today’s call.
 
-Please find below the key points discussed and agreed upon during the meeting:
+BASE_URL = "https://localhost:8000"
+UPLOAD_ENDPOINT = "/api/documents/upload"
 
-1. Opening Script, Returning Services & Additional Services
+TOKEN = "YOUR_BEARER_TOKEN"
 
-* The major issue identified with the evaluation of the Opening Script, Returning Services, and Additional Services questions is related to the current STT module.
-* We expect improvements in transcription quality once the new model is deployed, currently planned for October.
+ROOT_FOLDER = "/path/to/documents"
 
-2. Calls That End Abruptly
 
-A. Customer-Ended Calls
+async def upload_document(
+    client: httpx.AsyncClient,
+    file_path: str,
+    title: str,
+    category: str,
+    sub_category: str,
+):
+    """
+    Upload a single PDF document.
+    """
 
-* In cases where the customer ends the call abruptly, we currently do not have information to reliably determine that the call was terminated by the customer.
-* Therefore, the agent should not be evaluated negatively based on the call ending abruptly, as the agent may not have had an opportunity to complete the required steps.
-* There were several instances in the feedback sheet where the customer had ended the call, but the AI evaluation was marked as incorrect. Such cases should not be considered as incorrect evaluations.
+    url = f"{BASE_URL}{UPLOAD_ENDPOINT}"
 
-B. Agent-Ended Calls
+    headers = {
+        "Authorization": f"Bearer {TOKEN}"
+    }
 
-* As previously agreed, scenarios where the agent ends the call will be addressed as part of Phase 3 of the project.
+    data = {
+        "title": title,
+        "category": category,
+        "sub_category": sub_category,
+    }
 
-3. Unnecessarily Long Call Duration
+    try:
+        with open(file_path, "rb") as f:
 
-* Most of the cases flagged as incorrect under the unnecessary call-duration criterion appear to be subjective in nature.
-* Hussain and the team will discuss this internally and identify whether there are any specific indicators, steps, or objective criteria that can be incorporated to evaluate this parameter more accurately.
-* The team will share the identified criteria with us once finalized.
+            files = {
+                "file": (
+                    os.path.basename(file_path),
+                    f,
+                    "application/pdf"
+                )
+            }
 
-4. Wrong Line / Wrong Number Calls
+            response = await client.post(
+                url,
+                headers=headers,
+                data=data,
+                files=files
+            )
 
-* Even in cases where the customer has dialed the wrong line/number, the agent is still expected to ask the Additional Services question as per the defined process.
+        print(
+            f"[{response.status_code}] "
+            f"{sub_category} -> {os.path.basename(file_path)}"
+        )
 
-5. Testing & Feedback
+        if response.status_code >= 400:
+            print("Response:", response.text)
 
-* As discussed, the Call Quality team will pause further testing and feedback until the new STT model is deployed.
-* This is because the current application has known transcription-related limitations, which are impacting the accuracy of several evaluation parameters.
-* Once the new model is deployed, testing and feedback can resume based on the improved transcription quality.
+        return response
 
-These were the key points discussed during today’s meeting. Please let us know if we have missed or misinterpreted any point discussed during the call.
+    except Exception as e:
 
-Regards,
-Ankit
+        print(
+            f"[ERROR] {file_path} | {str(e)}"
+        )
+
+        return None
+
+
+async def upload_all_documents():
+
+    # Find all PDFs recursively
+    pdf_files = []
+
+    for root, dirs, files in os.walk(ROOT_FOLDER):
+
+        for file in files:
+
+            if file.lower().endswith(".pdf"):
+
+                full_path = os.path.join(root, file)
+                pdf_files.append(full_path)
+
+    print(f"Found {len(pdf_files)} PDF files.\n")
+
+    async with httpx.AsyncClient(
+        verify=False,
+        timeout=120.0
+    ) as client:
+
+        for pdf_path in pdf_files:
+
+            # Get path relative to root folder
+            relative_path = os.path.relpath(
+                pdf_path,
+                ROOT_FOLDER
+            )
+
+            # First folder = sub_category
+            path_parts = relative_path.split(os.sep)
+
+            if len(path_parts) < 2:
+                print(
+                    f"[SKIPPED] PDF is directly inside root folder: "
+                    f"{pdf_path}"
+                )
+                continue
+
+            sub_category = path_parts[0]
+
+            # Filename without .pdf = title
+            filename = os.path.basename(pdf_path)
+
+            title = os.path.splitext(filename)[0]
+
+            await upload_document(
+                client=client,
+                file_path=pdf_path,
+                title=title,
+                category="WPB",
+                sub_category=sub_category
+            )
+
+            print()
+
+
+if __name__ == "__main__":
+    asyncio.run(upload_all_documents())
