@@ -1,111 +1,278 @@
-from fastapi import FastAPI, HTTPException
-from fastapi.responses import FileResponse
 import os
+import asyncio
+import httpx
+import csv
+from datetime import datetime
 
-app = FastAPI()
 
-EXCEL_STORAGE_PATH = "./uploads/excel"  # Or wherever your Excel files are stored
+BASE_URL = "https://localhost:8000"
+UPLOAD_ENDPOINT = "/api/documents/upload"
 
-@app.get("/download-excel/{job_id}")
-def download_excel(job_id: str):
-    # Construct file path (e.g., job_id.xlsx)
-    file_path = os.path.join(EXCEL_STORAGE_PATH, f"{job_id}.xlsx")
+TOKEN = "YOUR_BEARER_TOKEN"
+ROOT_FOLDER = "/path/to/documents"
 
-    if not os.path.exists(file_path):
-        raise HTTPException(status_code=404, detail="Excel file not found")
+LOG_FILE = "upload_log.csv"
 
-    return FileResponse(
-        path=file_path,
-        media_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-        filename=f"{job_id}.xlsx"
-    )
-    
-    
-from fastapi import FastAPI, UploadFile, File
-from typing import List
-import shutil
-import os
 
-app = FastAPI()
+def initialize_log():
+    """Create log file with headers if it doesn't exist."""
 
-UPLOAD_DIR = "./uploads/bulk"
-os.makedirs(UPLOAD_DIR, exist_ok=True)
+    if not os.path.exists(LOG_FILE):
+        with open(LOG_FILE, "w", newline="", encoding="utf-8") as f:
 
-@app.post("/upload-multiple")
-async def upload_multiple_files(files: List[UploadFile] = File(...)):
-    saved_files = []
-    for file in files:
-        file_path = os.path.join(UPLOAD_DIR, file.filename)
-        with open(file_path, "wb") as buffer:
-            shutil.copyfileobj(file.file, buffer)
-        saved_files.append(file_path)
+            writer = csv.writer(f)
 
-    return {"uploaded": saved_files}
-    
-    
+            writer.writerow([
+                "Timestamp",
+                "Document",
+                "File_Path",
+                "Category",
+                "Sub_Category",
+                "Status",
+                "HTTP_Status",
+                "Response"
+            ])
 
-from fastapi import FastAPI, UploadFile, File
-from typing import List
-import os
-import aiofiles
 
-app = FastAPI()
+def write_log(
+    document,
+    file_path,
+    category,
+    sub_category,
+    status,
+    http_status,
+    response
+):
+    """Write upload result to CSV."""
 
-BASE_UPLOAD_DIR = "./uploads"
+    with open(LOG_FILE, "a", newline="", encoding="utf-8") as f:
 
-@app.post("/upload-folder")
-async def upload_folder(files: List[UploadFile] = File(...)):
-    saved_files = []
+        writer = csv.writer(f)
 
-    for file in files:
-        # The browser sends `filename` as webkitRelativePath (e.g. "subdir/file.xlsx")
-        relative_path = file.filename  
-        save_path = os.path.join(BASE_UPLOAD_DIR, relative_path)
+        writer.writerow([
+            datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            document,
+            file_path,
+            category,
+            sub_category,
+            status,
+            http_status,
+            response
+        ])
 
-        # Create directories if needed
-        os.makedirs(os.path.dirname(save_path), exist_ok=True)
 
-        # Save asynchronously
-        async with aiofiles.open(save_path, 'wb') as out_file:
-            content = await file.read()
-            await out_file.write(content)
+async def upload_document(
+    client: httpx.AsyncClient,
+    file_path: str,
+    title: str,
+    category: str,
+    sub_category: str
+):
 
-        saved_files.append(save_path)
+    url = f"{BASE_URL}{UPLOAD_ENDPOINT}"
 
-    return {"saved": saved_files}
-    
-    
-from fastapi import FastAPI, UploadFile, File
-from typing import List
-import os
-import aiofiles
+    headers = {
+        "Authorization": f"Bearer {TOKEN}"
+    }
 
-app = FastAPI()
+    data = {
+        "title": title,
+        "category": category,
+        "sub_category": sub_category
+    }
 
-BASE_UPLOAD_DIR = "./uploads"
+    try:
 
-@app.post("/upload-folder")
-async def upload_folder(files: List[UploadFile] = File(...)):
-    if not files:
-        return {"error": "No files uploaded"}
+        with open(file_path, "rb") as f:
 
-    # Take the root folder from the first file’s relative path
-    first_file_path = files[0].filename  # e.g. "ProjectData/audio/file1.wav"
-    root_folder = first_file_path.split("/")[0]  # "ProjectData"
+            files = {
+                "file": (
+                    os.path.basename(file_path),
+                    f,
+                    "application/pdf"
+                )
+            }
 
-    # Build the absolute save path for this folder
-    save_folder_path = os.path.join(BASE_UPLOAD_DIR, root_folder)
+            response = await client.post(
+                url,
+                headers=headers,
+                data=data,
+                files=files
+            )
 
-    # Save all files while preserving structure
-    for file in files:
-        relative_path = file.filename  # "ProjectData/audio/file1.wav"
-        save_path = os.path.join(BASE_UPLOAD_DIR, relative_path)
+        # Successful response
+        if 200 <= response.status_code < 300:
 
-        os.makedirs(os.path.dirname(save_path), exist_ok=True)
+            print(
+                f"[SUCCESS] "
+                f"{category} | "
+                f"{sub_category} | "
+                f"{os.path.basename(file_path)}"
+            )
 
-        async with aiofiles.open(save_path, 'wb') as out_file:
-            content = await file.read()
-            await out_file.write(content)
+            write_log(
+                document=os.path.basename(file_path),
+                file_path=file_path,
+                category=category,
+                sub_category=sub_category,
+                status="SUCCESS",
+                http_status=response.status_code,
+                response=response.text
+            )
 
-    # ✅ Return the folder path for future API calls
-    return {"saved_folder": save_folder_path}
+            return True
+
+        # Failed response
+        else:
+
+            print(
+                f"[FAILED] "
+                f"{category} | "
+                f"{sub_category} | "
+                f"{os.path.basename(file_path)} | "
+                f"HTTP {response.status_code}"
+            )
+
+            write_log(
+                document=os.path.basename(file_path),
+                file_path=file_path,
+                category=category,
+                sub_category=sub_category,
+                status="FAILED",
+                http_status=response.status_code,
+                response=response.text
+            )
+
+            return False
+
+    except Exception as e:
+
+        print(
+            f"[ERROR] "
+            f"{category} | "
+            f"{sub_category} | "
+            f"{os.path.basename(file_path)} | "
+            f"{str(e)}"
+        )
+
+        write_log(
+            document=os.path.basename(file_path),
+            file_path=file_path,
+            category=category,
+            sub_category=sub_category,
+            status="ERROR",
+            http_status="",
+            response=str(e)
+        )
+
+        return False
+
+
+async def upload_all_documents():
+
+    initialize_log()
+
+    pdf_files = []
+
+    # Find PDFs recursively
+    for root, dirs, files in os.walk(ROOT_FOLDER):
+
+        for file in files:
+
+            if file.lower().endswith(".pdf"):
+
+                full_path = os.path.join(root, file)
+
+                pdf_files.append(full_path)
+
+    print(f"Found {len(pdf_files)} PDF files.\n")
+
+    successful = 0
+    failed = 0
+    errors = 0
+
+    async with httpx.AsyncClient(
+        verify=False,
+        timeout=120.0
+    ) as client:
+
+        for pdf_path in pdf_files:
+
+            relative_path = os.path.relpath(
+                pdf_path,
+                ROOT_FOLDER
+            )
+
+            path_parts = relative_path.split(os.sep)
+
+            # PDF directly inside root folder
+            if len(path_parts) < 2:
+
+                print(
+                    f"[SKIPPED] "
+                    f"{pdf_path}"
+                )
+
+                continue
+
+            # Folder name
+            folder_name = path_parts[0]
+
+            # Extract English name
+            #
+            # Example:
+            # Accounts - الحسابات
+            #       ↓
+            # Accounts
+            #
+            english_name = folder_name.split(
+                " - ",
+                1
+            )[0].strip()
+
+            # Lowercase sub-category
+            sub_category = english_name.lower()
+
+            # Document name
+            filename = os.path.basename(pdf_path)
+
+            # Title without extension
+            title = os.path.splitext(filename)[0]
+
+            print(
+                f"Uploading: {filename}\n"
+                f"Category: WPB\n"
+                f"Sub-category: {sub_category}"
+            )
+
+            result = await upload_document(
+                client=client,
+                file_path=pdf_path,
+                title=title,
+                category="WPB",
+                sub_category=sub_category
+            )
+
+            if result:
+                successful += 1
+            else:
+                failed += 1
+
+            print()
+
+    # Final summary
+    print("\n")
+    print("=" * 60)
+    print("UPLOAD SUMMARY")
+    print("=" * 60)
+
+    print(f"Total documents : {len(pdf_files)}")
+    print(f"Successful      : {successful}")
+    print(f"Failed          : {failed}")
+    print(f"Log file        : {LOG_FILE}")
+
+    print("=" * 60)
+
+
+if __name__ == "__main__":
+    asyncio.run(upload_all_documents())
